@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tags on Cisco Learning CodeLabs</title>
+    <link>https://kiskander.github.io/tags/</link>
+    <description>Recent content in Tags on Cisco Learning CodeLabs</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 10 Feb 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://kiskander.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>sample</title>
+      <link>https://kiskander.github.io/tags/sample/</link>
+      <pubDate>Thu, 10 Feb 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://kiskander.github.io/tags/sample/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ML Pipeline</title>
+      <link>https://kiskander.github.io/tags/ml-pipeline/</link>
+      <pubDate>Mon, 06 Sep 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://kiskander.github.io/tags/ml-pipeline/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>MLOps</title>
+      <link>https://kiskander.github.io/tags/mlops/</link>
+      <pubDate>Mon, 06 Sep 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://kiskander.github.io/tags/mlops/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>TFX</title>
+      <link>https://kiskander.github.io/tags/tfx/</link>
+      <pubDate>Mon, 06 Sep 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://kiskander.github.io/tags/tfx/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>VertexAI</title>
+      <link>https://kiskander.github.io/tags/vertexai/</link>
+      <pubDate>Mon, 06 Sep 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://kiskander.github.io/tags/vertexai/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Notebook</title>
+      <link>https://kiskander.github.io/tags/notebook/</link>
+      <pubDate>Fri, 03 Sep 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://kiskander.github.io/tags/notebook/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,58 @@
+# This is a basic workflow to help you get started with Actions
+
+name: CI
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          submodules: true
+          fetch-depth: 0 # Fetch all history for .GitInfo and .Lastmod
+
+      - name: update submodules up to date
+        run: git submodule foreach git pull origin master
+
+      - name: check if something changed
+        uses: dorny/paths-filter@v2.2.1
+        id: filter
+        with:
+          base: 'main'
+          filters: |
+            docs:
+              - 'exampleSite/**'
+
+      - name: Setup Hugo
+        if: ${{ steps.filter.outputs.docs == 'true' }}
+        uses: peaceiris/actions-hugo@v2
+        with:
+          hugo-version: 'latest'
+
+      - name: Build hugo
+        if: ${{ steps.filter.outputs.docs == 'true' }}
+        run: ./build_docs.sh
+
+      - name: Git init
+        if: ${{ steps.filter.outputs.docs == 'true' }}
+        run: |
+          git config --global user.name '${{github.actor}}'
+          git config --global user.email '${{github.actor}}@users.noreply.github.com'
+
+      - name: Git add
+        if: ${{ steps.filter.outputs.docs == 'true' }}
+        run: git add --force .
+
+      - name: Git commit
+        if: ${{ steps.filter.outputs.docs == 'true' }}
+        run: git commit -m "publish"
+
+      - name: Push public to branch
+        if: ${{ steps.filter.outputs.docs == 'true' }}
+        run: |
+          git push -f origin main

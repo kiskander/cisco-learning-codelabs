@@ -21,8 +21,9 @@ jobs:
           hugo-version: 'latest'
           # extended: true
 
-      - name: Build
-        run: hugo --minify
+      - name: Build hugo
+        if: ${{ steps.filter.outputs.docs == 'true' }}
+        run: ./build_docs.sh
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3

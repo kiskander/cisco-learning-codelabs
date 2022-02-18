@@ -1,0 +1,16 @@
+# End your baseURL with a `/` trailing slash, e.g. `https://example.com/`.
+baseURL = "https://kiskander.github.io/cisco-learning-codelabs"
+
+title = "Cisco Learning CodeLabs"
+languageCode = "en-us"
+theme = "codelabs"
+
+[params]
+  footer = "<a href=\"https://www.cisco.com\">Cisco Learning and Certification</a>"
+  feedbackLink = "mailto:donotreply@cisco.com"
+  [params.categoryColors]
+    mlops = "#1A73E8"
+    tfx = "#f58442"
+    gcp = "#3884ff"
+    jupyter = "#fc4903"
+    mtest = "#1A73E8"

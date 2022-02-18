@@ -1,5 +1,5 @@
 # End your baseURL with a `/` trailing slash, e.g. `https://example.com/`.
-baseURL = "https://kiskander.github.io/cisco-learning-codelabs"
+baseURL = "https://kiskander.github.io/cisco-learning-codelabs/"
 
 title = "Cisco Learning CodeLabs"
 languageCode = "en-us"

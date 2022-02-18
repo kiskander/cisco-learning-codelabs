@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Cisco Learning CodeLabs</title>
-    <link>https://kiskander.github.io/</link>
+    <link>https://kiskander.github.io/cisco-learning-codelabs/</link>
     <description>Recent content on Cisco Learning CodeLabs</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 10 Feb 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://kiskander.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 10 Feb 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://kiskander.github.io/cisco-learning-codelabs/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Beer Making 101</title>
-      <link>https://kiskander.github.io/posts/beer-101/</link>
+      <link>https://kiskander.github.io/cisco-learning-codelabs/posts/beer-101/</link>
       <pubDate>Thu, 10 Feb 2022 00:00:00 +0000</pubDate>
       
-      <guid>https://kiskander.github.io/posts/beer-101/</guid>
+      <guid>https://kiskander.github.io/cisco-learning-codelabs/posts/beer-101/</guid>
       <description>Brew Beer Fundamentals Step 01: Milling the grain Duration: 0:02:00
 Beginning In the brew house, different types of malt are crushed together to break up the grain kernels in order to extract fermentable sugars to produce a milled product called grist.
 import json print(&amp;#34;making beer is fun&amp;#34;) Step 02: Mash Conversion Duration: 0:05:00
@@ -22,20 +22,20 @@ The grist is then transferred into a mash turn
     
     <item>
       <title>Introduction to TFX CLI</title>
-      <link>https://kiskander.github.io/posts/tfx-cli-101/</link>
+      <link>https://kiskander.github.io/cisco-learning-codelabs/posts/tfx-cli-101/</link>
       <pubDate>Mon, 06 Sep 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://kiskander.github.io/posts/tfx-cli-101/</guid>
+      <guid>https://kiskander.github.io/cisco-learning-codelabs/posts/tfx-cli-101/</guid>
       <description>TensorFlow Extended(TFX) gives you the power of building a end to end machine learning pipeline. However it is somewhat difficult to grasp the ideas coupled with the actual codebase, and it is non trivial to write an entire machinie learning project from scratch.
 The main advantage of using TFX CLI is that you can get a fully working end to end example out of the box. Also, many customizable points are already included such as how to leverage BigQuery, Vertex AI Training/Serving, Dataflow GCP infrastructure.</description>
     </item>
     
     <item>
       <title>Learn how to setup Vertex AI Notebook for pipelines</title>
-      <link>https://kiskander.github.io/posts/vertex-ai-notebook/</link>
+      <link>https://kiskander.github.io/cisco-learning-codelabs/posts/vertex-ai-notebook/</link>
       <pubDate>Fri, 03 Sep 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://kiskander.github.io/posts/vertex-ai-notebook/</guid>
+      <guid>https://kiskander.github.io/cisco-learning-codelabs/posts/vertex-ai-notebook/</guid>
       <description>Vertex AI platform provides the fully managed version of JupyterLab. JupyterLab has been the most popoular tool for data scientists and machine learning engineer. It comes with not only Jupyter Notebook but also Terminal, and so on.
 What you&amp;rsquo;ll learn  How to setup IAM How to setup and launch Vertex AI Notebook  What you&amp;rsquo;ll need  A Google Cloud Project A Browser, such as Chrome or Firefox   If you want to run the pipeline on Vertex AI, your GCP service account should have the following roles.</description>
     </item>

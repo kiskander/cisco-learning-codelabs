@@ -2,55 +2,55 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://kiskander.github.io/posts/beer-101/</loc>
+    <loc>https://kiskander.github.io/cisco-learning-codelabs/posts/beer-101/</loc>
     <lastmod>2022-02-10T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://kiskander.github.io/categories/</loc>
+    <loc>https://kiskander.github.io/cisco-learning-codelabs/categories/</loc>
     <lastmod>2022-02-10T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://kiskander.github.io/</loc>
+    <loc>https://kiskander.github.io/cisco-learning-codelabs/</loc>
     <lastmod>2022-02-10T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://kiskander.github.io/categories/mlops/</loc>
+    <loc>https://kiskander.github.io/cisco-learning-codelabs/categories/mlops/</loc>
     <lastmod>2022-02-10T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://kiskander.github.io/posts/</loc>
+    <loc>https://kiskander.github.io/cisco-learning-codelabs/posts/</loc>
     <lastmod>2022-02-10T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://kiskander.github.io/tags/sample/</loc>
+    <loc>https://kiskander.github.io/cisco-learning-codelabs/tags/sample/</loc>
     <lastmod>2022-02-10T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://kiskander.github.io/tags/</loc>
+    <loc>https://kiskander.github.io/cisco-learning-codelabs/tags/</loc>
     <lastmod>2022-02-10T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://kiskander.github.io/categories/gcp/</loc>
+    <loc>https://kiskander.github.io/cisco-learning-codelabs/categories/gcp/</loc>
     <lastmod>2021-09-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://kiskander.github.io/posts/tfx-cli-101/</loc>
+    <loc>https://kiskander.github.io/cisco-learning-codelabs/posts/tfx-cli-101/</loc>
     <lastmod>2021-09-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://kiskander.github.io/tags/ml-pipeline/</loc>
+    <loc>https://kiskander.github.io/cisco-learning-codelabs/tags/ml-pipeline/</loc>
     <lastmod>2021-09-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://kiskander.github.io/tags/mlops/</loc>
+    <loc>https://kiskander.github.io/cisco-learning-codelabs/tags/mlops/</loc>
     <lastmod>2021-09-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://kiskander.github.io/tags/tfx/</loc>
+    <loc>https://kiskander.github.io/cisco-learning-codelabs/tags/tfx/</loc>
     <lastmod>2021-09-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://kiskander.github.io/categories/tfx/</loc>
+    <loc>https://kiskander.github.io/cisco-learning-codelabs/categories/tfx/</loc>
     <lastmod>2021-09-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://kiskander.github.io/tags/vertexai/</loc>
+    <loc>https://kiskander.github.io/cisco-learning-codelabs/tags/vertexai/</loc>
     <lastmod>2021-09-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://kiskander.github.io/categories/jupyter/</loc>
+    <loc>https://kiskander.github.io/cisco-learning-codelabs/categories/jupyter/</loc>
     <lastmod>2021-09-03T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://kiskander.github.io/posts/vertex-ai-notebook/</loc>
+    <loc>https://kiskander.github.io/cisco-learning-codelabs/posts/vertex-ai-notebook/</loc>
     <lastmod>2021-09-03T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://kiskander.github.io/tags/notebook/</loc>
+    <loc>https://kiskander.github.io/cisco-learning-codelabs/tags/notebook/</loc>
     <lastmod>2021-09-03T00:00:00+00:00</lastmod>
   </url>
 </urlset>

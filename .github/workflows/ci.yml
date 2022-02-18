@@ -35,8 +35,6 @@ jobs:
         with:
           hugo-version: 'latest'
 
-      - name: Build
-        run: hugo --minify
 
       - name: Build hugo
         if: ${{ steps.filter.outputs.docs == 'true' }}

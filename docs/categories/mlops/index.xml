@@ -13,9 +13,9 @@
       <pubDate>Thu, 10 Feb 2022 00:00:00 +0000</pubDate>
       
       <guid>https://kiskander.github.io/cisco-learning-codelabs/posts/beer-101/</guid>
-      <description>Brew Beer Fundamentals Step 01: Milling the grain Duration: 0:02:00
+      <description>Brew Beer Fundamentals Duration: 0:02:00
 Beginning In the brew house, different types of malt are crushed together to break up the grain kernels in order to extract fermentable sugars to produce a milled product called grist.
-import json print(&amp;#34;making beer is fun&amp;#34;) Step 02: Mash Conversion Duration: 0:05:00
+import json print(&amp;#34;making beer is fun&amp;#34;)   Step 02: Mash Conversion Duration: 0:05:00
 The grist is then transferred into a mash turn
  where it is mixed with heated water in a process called mash conversion.</description>
     </item>

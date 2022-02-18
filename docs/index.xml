@@ -13,9 +13,9 @@
       <pubDate>Thu, 10 Feb 2022 00:00:00 +0000</pubDate>
       
       <guid>https://kiskander.github.io/cisco-learning-codelabs/posts/beer-101/</guid>
-      <description>Brew Beer Fundamentals Step 01: Milling the grain Duration: 0:02:00
+      <description>Brew Beer Fundamentals Duration: 0:02:00
 Beginning In the brew house, different types of malt are crushed together to break up the grain kernels in order to extract fermentable sugars to produce a milled product called grist.
-import json print(&amp;#34;making beer is fun&amp;#34;) Step 02: Mash Conversion Duration: 0:05:00
+import json print(&amp;#34;making beer is fun&amp;#34;)   Step 02: Mash Conversion Duration: 0:05:00
 The grist is then transferred into a mash turn
  where it is mixed with heated water in a process called mash conversion.</description>
     </item>
@@ -38,6 +38,17 @@ The main advantage of using TFX CLI is that you can get a fully working end to e
       <guid>https://kiskander.github.io/cisco-learning-codelabs/posts/vertex-ai-notebook/</guid>
       <description>Vertex AI platform provides the fully managed version of JupyterLab. JupyterLab has been the most popoular tool for data scientists and machine learning engineer. It comes with not only Jupyter Notebook but also Terminal, and so on.
 What you&amp;rsquo;ll learn  How to setup IAM How to setup and launch Vertex AI Notebook  What you&amp;rsquo;ll need  A Google Cloud Project A Browser, such as Chrome or Firefox   If you want to run the pipeline on Vertex AI, your GCP service account should have the following roles.</description>
+    </item>
+    
+    <item>
+      <title>Learn how to install, configure and run the fantastic InspIRCd IRC server.</title>
+      <link>https://kiskander.github.io/cisco-learning-codelabs/posts/build-irc-server/</link>
+      <pubDate>Fri, 02 Feb 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://kiskander.github.io/cisco-learning-codelabs/posts/build-irc-server/</guid>
+      <description>Despite modern alternatives like Slack, the ancient [IRC][irc-info] is still hugely popular as an online interactive chat platform.
+This may be because there are IRC clients for almost every operating system and device, from the Commodore Amiga to your smartphone, and the technology behind IRC is reassuringly simplistic - it really is just raw text and a few control characters being bumped around the network.
+Online servers, such as those offered by [Freenode][freenode], are wonderful for both public and private channels.</description>
     </item>
     
   </channel>

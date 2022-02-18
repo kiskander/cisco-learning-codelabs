@@ -7,7 +7,7 @@ on:
     branches: [ main ]
 
 jobs:
-  build:
+  deploy:
     runs-on: ubuntu-latest
 
     steps:
@@ -24,15 +24,18 @@ jobs:
         id: filter
         with:
           base: 'main'
-          filters: |
-            docs:
-              - 'exampleSite/**'
+#          filters: |
+#            docs:
+#              - 'exampleSite/**'
 
       - name: Setup Hugo
         if: ${{ steps.filter.outputs.docs == 'true' }}
         uses: peaceiris/actions-hugo@v2
         with:
           hugo-version: 'latest'
+
+      - name: Build
+        run: hugo --minify
 
       - name: Build hugo
         if: ${{ steps.filter.outputs.docs == 'true' }}

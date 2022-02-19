@@ -23,8 +23,9 @@ jobs:
 
       - name: Build hugo
         if: ${{ steps.filter.outputs.docs == 'true' }}
-        run: echo "This step will always run"
-        run: ./build_docs.sh
+        run: |
+          ./build_docs.sh
+          run: echo "This step will always run"
 
       - name: Git init
         if: ${{ steps.filter.outputs.docs == 'true' }}

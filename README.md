@@ -74,9 +74,4 @@ In order to make codelabs as appealing as possible, here are few recommendation:
   - Add links to other resources for keeping things compact and interesting to the readers.
 - Write multi part codelabs:
   - If you need more detailed explanation on certain topics, simply write more codelabs and leave links. In this way, readers can consume the whole concept/tutorials bite by bite.
-
-There are many wonderful codelabs at [Google Codelabs](https://codelabs.developers.google.com/), so please take a look how they are written. Here are some of them:
-
-- [Using BigQuery with Python](https://codelabs.developers.google.com/codelabs/cloud-bigquery-python)
-- [TensorFlow, Keras and deep learning, without a PhD](https://codelabs.developers.google.com/codelabs/cloud-tensorflow-mnist)
-- [Train and deploy on-device image classification model with AutoML Vision in ML Kit](https://codelabs.developers.google.com/codelabs/automl-vision-edge-in-mlkit)
+  

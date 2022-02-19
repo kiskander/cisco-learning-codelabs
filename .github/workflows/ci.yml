@@ -21,23 +21,22 @@ jobs:
           hugo-version: 'latest'
           extended: true
 
-#      - name: Build hugo
-#        run: |
-#          ./build_docs.sh
-#          echo "This step will always run"
-#
-#      - name: Git init
-#        run: |
-#          echo steps.filter.outputs.docs
-#          git config --global user.name '${{github.actor}}'
-#          git config --global user.email '${{github.actor}}@users.noreply.github.com'
-#
-#      - name: Git add
-#        run: git add --force .
-#
-#      - name: Git commit
-#        run: git commit -m "publish"
-#
-#      - name: Push to main
-#        run: |
-#          git push -f origin main
+      - name: Build hugo
+        run: |
+          echo "Running Hego build"
+          ./build_docs.sh
+
+      - name: Git init
+        run: |
+          echo steps.filter.outputs.docs
+          git config --global user.name '${{github.actor}}'
+          git config --global user.email '${{github.actor}}@users.noreply.github.com'
+
+      - name: Git add
+        run: git add --force .
+
+      - name: Git commit
+        run: git commit -m "published new content"
+
+      - name: Push to main
+        run: git push

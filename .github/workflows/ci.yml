@@ -23,7 +23,7 @@ jobs:
 
       - name: Build hugo
         run: |
-          echo "Running Hego build"
+          echo "Running Hugo build"
           ./build_docs.sh
 
       - name: Git init

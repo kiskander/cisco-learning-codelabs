@@ -24,3 +24,21 @@ jobs:
       - name: Build hugo
         if: ${{ steps.filter.outputs.docs == 'true' }}
         run: ./build_docs.sh
+
+      - name: Git init
+        if: ${{ steps.filter.outputs.docs == 'true' }}
+        run: |
+          git config --global user.name '${{github.actor}}'
+          git config --global user.email '${{github.actor}}@users.noreply.github.com'
+      - name: Git add
+        if: ${{ steps.filter.outputs.docs == 'true' }}
+        run: git add --force .
+
+      - name: Git commit
+        if: ${{ steps.filter.outputs.docs == 'true' }}
+        run: git commit -m "publish"
+
+      - name: Push public to branch
+        if: ${{ steps.filter.outputs.docs == 'true' }}
+        run: |
+          git push -f origin main

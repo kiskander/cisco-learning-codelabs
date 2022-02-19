@@ -23,6 +23,7 @@ jobs:
 
       - name: Build hugo
         if: ${{ steps.filter.outputs.docs == 'true' }}
+        run: echo "This step will always run"
         run: ./build_docs.sh
 
       - name: Git init
@@ -30,6 +31,7 @@ jobs:
         run: |
           git config --global user.name '${{github.actor}}'
           git config --global user.email '${{github.actor}}@users.noreply.github.com'
+
       - name: Git add
         if: ${{ steps.filter.outputs.docs == 'true' }}
         run: git add --force .

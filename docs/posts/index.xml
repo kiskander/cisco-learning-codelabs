@@ -31,6 +31,16 @@ The main advantage of using TFX CLI is that you can get a fully working end to e
     </item>
     
     <item>
+      <title>Bruh! is it working?</title>
+      <link>https://kiskander.github.io/cisco-learning-codelabs/posts/sample-4/</link>
+      <pubDate>Fri, 03 Sep 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://kiskander.github.io/cisco-learning-codelabs/posts/sample-4/</guid>
+      <description>Vertex AI platform provides the fully managed version of JupyterLab. JupyterLab has been the most popoular tool for data scientists and machine learning engineer. It comes with not only Jupyter Notebook but also Terminal, and so on.
+What you&amp;rsquo;ll learn  How to setup IAM How to setup and launch Vertex AI Notebook  What you&amp;rsquo;ll need  A Google Cloud Project A Browser, such as Chrome or Firefox   </description>
+    </item>
+    
+    <item>
       <title>Learn how to setup Vertex AI Notebook for pipelines</title>
       <link>https://kiskander.github.io/cisco-learning-codelabs/posts/vertex-ai-notebook/</link>
       <pubDate>Fri, 03 Sep 2021 00:00:00 +0000</pubDate>

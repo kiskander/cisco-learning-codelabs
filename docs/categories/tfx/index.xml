@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>tfx on Cisco Learning CodeLabs</title>
+    <title>TFX on Cisco Learning CodeLabs</title>
     <link>https://kiskander.github.io/cisco-learning-codelabs/categories/tfx/</link>
-    <description>Recent content in tfx on Cisco Learning CodeLabs</description>
+    <description>Recent content in TFX on Cisco Learning CodeLabs</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 06 Sep 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://kiskander.github.io/cisco-learning-codelabs/categories/tfx/index.xml" rel="self" type="application/rss+xml" />
@@ -15,6 +15,16 @@
       <guid>https://kiskander.github.io/cisco-learning-codelabs/posts/tfx-cli-101/</guid>
       <description>TensorFlow Extended(TFX) gives you the power of building a end to end machine learning pipeline. However it is somewhat difficult to grasp the ideas coupled with the actual codebase, and it is non trivial to write an entire machinie learning project from scratch.
 The main advantage of using TFX CLI is that you can get a fully working end to end example out of the box. Also, many customizable points are already included such as how to leverage BigQuery, Vertex AI Training/Serving, Dataflow GCP infrastructure.</description>
+    </item>
+    
+    <item>
+      <title>Bruh! is it working?</title>
+      <link>https://kiskander.github.io/cisco-learning-codelabs/posts/sample-4/</link>
+      <pubDate>Fri, 03 Sep 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://kiskander.github.io/cisco-learning-codelabs/posts/sample-4/</guid>
+      <description>Vertex AI platform provides the fully managed version of JupyterLab. JupyterLab has been the most popoular tool for data scientists and machine learning engineer. It comes with not only Jupyter Notebook but also Terminal, and so on.
+What you&amp;rsquo;ll learn  How to setup IAM How to setup and launch Vertex AI Notebook  What you&amp;rsquo;ll need  A Google Cloud Project A Browser, such as Chrome or Firefox   </description>
     </item>
     
   </channel>

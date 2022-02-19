@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tags on Cisco Learning CodeLabs</title>
+    <link>https://kiskander.github.io/cisco-learning-codelabs/tags/</link>
+    <description>Recent content in Tags on Cisco Learning CodeLabs</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 10 Feb 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://kiskander.github.io/cisco-learning-codelabs/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>sample</title>
+      <link>https://kiskander.github.io/cisco-learning-codelabs/tags/sample/</link>
+      <pubDate>Thu, 10 Feb 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://kiskander.github.io/cisco-learning-codelabs/tags/sample/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ML Pipeline</title>
+      <link>https://kiskander.github.io/cisco-learning-codelabs/tags/ml-pipeline/</link>
+      <pubDate>Mon, 06 Sep 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://kiskander.github.io/cisco-learning-codelabs/tags/ml-pipeline/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>MLOps</title>
+      <link>https://kiskander.github.io/cisco-learning-codelabs/tags/mlops/</link>
+      <pubDate>Mon, 06 Sep 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://kiskander.github.io/cisco-learning-codelabs/tags/mlops/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>TFX</title>
+      <link>https://kiskander.github.io/cisco-learning-codelabs/tags/tfx/</link>
+      <pubDate>Mon, 06 Sep 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://kiskander.github.io/cisco-learning-codelabs/tags/tfx/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>VertexAI</title>
+      <link>https://kiskander.github.io/cisco-learning-codelabs/tags/vertexai/</link>
+      <pubDate>Mon, 06 Sep 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://kiskander.github.io/cisco-learning-codelabs/tags/vertexai/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Notebook</title>
+      <link>https://kiskander.github.io/cisco-learning-codelabs/tags/notebook/</link>
+      <pubDate>Fri, 03 Sep 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://kiskander.github.io/cisco-learning-codelabs/tags/notebook/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>chat</title>
+      <link>https://kiskander.github.io/cisco-learning-codelabs/tags/chat/</link>
+      <pubDate>Fri, 02 Feb 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://kiskander.github.io/cisco-learning-codelabs/tags/chat/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>guide</title>
+      <link>https://kiskander.github.io/cisco-learning-codelabs/tags/guide/</link>
+      <pubDate>Fri, 02 Feb 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://kiskander.github.io/cisco-learning-codelabs/tags/guide/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>hidden</title>
+      <link>https://kiskander.github.io/cisco-learning-codelabs/tags/hidden/</link>
+      <pubDate>Fri, 02 Feb 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://kiskander.github.io/cisco-learning-codelabs/tags/hidden/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>InspIRCd</title>
+      <link>https://kiskander.github.io/cisco-learning-codelabs/tags/inspircd/</link>
+      <pubDate>Fri, 02 Feb 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://kiskander.github.io/cisco-learning-codelabs/tags/inspircd/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>irc</title>
+      <link>https://kiskander.github.io/cisco-learning-codelabs/tags/irc/</link>
+      <pubDate>Fri, 02 Feb 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://kiskander.github.io/cisco-learning-codelabs/tags/irc/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>server</title>
+      <link>https://kiskander.github.io/cisco-learning-codelabs/tags/server/</link>
+      <pubDate>Fri, 02 Feb 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://kiskander.github.io/cisco-learning-codelabs/tags/server/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>tutorial</title>
+      <link>https://kiskander.github.io/cisco-learning-codelabs/tags/tutorial/</link>
+      <pubDate>Fri, 02 Feb 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://kiskander.github.io/cisco-learning-codelabs/tags/tutorial/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

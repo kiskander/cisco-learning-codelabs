@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Learning@Cisco Launchpad 🚀</title>
+    <title>Cisco Learning and Certifications</title>
     <link>https://kiskander.github.io/cisco-learning-codelabs/</link>
-    <description>Recent content on Learning@Cisco Launchpad 🚀</description>
+    <description>Recent content on Cisco Learning and Certifications</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 10 Feb 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://kiskander.github.io/cisco-learning-codelabs/index.xml" rel="self" type="application/rss+xml" />

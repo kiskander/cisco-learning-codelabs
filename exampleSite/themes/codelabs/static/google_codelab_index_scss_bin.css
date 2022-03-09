@@ -1,16 +1,12 @@
 #shadow,
 #toolbar,
 #banner,
-#codelab-categories,
-google-codelab-index-cards .card,
-google-codelab-index-cards .card-footer .paper-button {
-    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2);
+google-codelab-index-cards .card {
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2);
 }
 #rounded,
-#searchbar,
-#codelab-categories,
 google-codelab-index-cards .card,
-google-codelab-index-cards .card-footer .paper-button {
+google-codelab-index-cards .card-footer {
     border-radius: 4px;
 }
 html,
@@ -23,13 +19,13 @@ body {
 body {
     transition: opacity ease-in 0.2s;
     padding-top: 64px;
-    background: #eceff1;
-    font-family: "Roboto", "Noto", sans-serif;
+    background: #FFFFFF;
+    font-family: "CiscoSansTT", sans-serif;
     -webkit-font-smoothing: antialiased;
     font-size: 16px;
     font-weight: 400;
     line-height: 24px;
-    color: #5c5c5c;
+    color: #7c7c7c;
 }
 * {
     box-sizing: border-box;
@@ -44,8 +40,8 @@ a {
     display: flex;
     align-items: center;
     height: 64px;
-    background-color: #455a64;
-    color: #fff;
+    color: #7c7c7c;
+    background-color: rgba(255, 255, 255, 1.0);
     padding: 16px;
     position: fixed;
     left: 0;
@@ -62,20 +58,27 @@ a {
     margin-right: 20px;
 }
 #toolbar .logo a {
-    color: #fff;
     font-size: 30px;
     font-weight: bold;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 43px;
+    letter-spacing: -0.02em;
+    color: rgba(13,13,13,0.9);
 }
 #searchbar {
-    background-color: #546e7a;
-    transition: background-color 400ms cubic-bezier(0, 0, 0.2, 1);
+    background-color: #eceff1;
+    transition: background-color 400ms cubic-bezier(0, 0, 0.2, 1.0);
     flex-grow: 1;
     display: flex;
     align-items: center;
     max-width: 400px;
+    border: 1px solid #000000;
+    box-sizing: border-box;
+    border-radius: 100px;
 }
 #searchbar:hover {
-    background-color: #78909c;
+    background-color: rgba(255, 255, 255, 0.9);
 }
 #searchbar input {
     border: 0;
@@ -84,17 +87,17 @@ a {
     width: 100%;
     font-size: 16px;
     font-weight: 400;
-    color: #fff;
+    color: #000;
     line-height: 40px;
     height: 40px;
     flex-grow: 1;
     z-index: 1;
 }
 #searchbar input::-webkit-input-placeholder {
-    color: rgba(255, 255, 255, 0.5);
+    color: rgba(255, 255, 255, 0.2);
 }
 #searchbar input:-ms-input-placeholder {
-    color: rgba(255, 255, 255, 0.5);
+    color: rgba(255, 255, 255, 0.2);
 }
 #search-icon,
 #clear-icon {
@@ -104,7 +107,7 @@ a {
     align-items: center;
     justify-content: center;
     flex-shrink: 0;
-    color: #fff;
+    color: #202020;
 }
 #clear-icon[hide] {
     visibility: hidden;
@@ -116,21 +119,36 @@ a {
     max-width: 1024px;
 }
 #banner {
-    background-color: #fff;
+    background-color: rgba(13,13,14,1);
     padding: 40px 0 48px 0;
 }
 h2 {
     margin: 0;
-    font-family: "Roboto", "Noto", sans-serif;
+    font-family: "CiscoSansTT", sans-serif;
     -webkit-font-smoothing: antialiased;
     font-size: 45px;
     font-weight: 400;
     letter-spacing: -0.018em;
     line-height: 48px;
 }
+#banner p
+{
+    font-weight: 350;
+    font-size: 18px;
+    font-style: normal;
+    line-height: 12px;
+    letter-spacing: 0em;
+    padding: 12px 0 12px 0;
+    color: rgba(255, 255, 255, 0.7);
+}
 #banner h2,
 #banner h3 {
-    font-weight: 300;
+    font-weight: 350;
+    font-style: normal;
+    font-size: 36px;
+    line-height: 43px;
+    letter-spacing: -0.02em;
+    color: rgba(255, 255, 255, 0.9);
 }
 #sort-by {
     padding: 24px 0;
@@ -144,41 +162,44 @@ h2 {
     flex-shrink: 0;
 }
 #sort-by-tabs a {
-    color: #98999a;
-    text-transform: uppercase;
-    line-height: 48px;
+    color: rgba(255, 255, 255, 0.6);
+    background: #000000;
+    line-height: 24px;
     font-weight: 500;
     font-size: 14px;
-    padding: 0 12px;
+    padding: 8px 12px 8px 12px;
     display: flex;
-    border-bottom: 2px solid transparent;
+    border: 0;
+    border-radius: 100px;
+    margin-right: 3px;
 }
 #sort-by-tabs a:hover {
-    background-color: #e0e0e0;
+    background-color: rgba(0, 0, 0, 0.6);
 }
 #sort-by-tabs a[selected] {
-    color: #616161;
-    border-bottom: 2px solid #616161;
+    color: #FFFFFF;
 }
 #codelab-categories {
-    border: none;
+    border-radius: 100px;
+    border: 0;
     padding: 8px 22px 8px 10px;
     appearance: none;
     -webkit-appearance: none;
-    font-size: 16px;
+    font-size: 14px;
     line-height: 24px;
-    color: #212121;
+    color: #FFFFFF;
     position: relative;
     cursor: pointer;
-    background: #fff
-        url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZlcnNpb249IjEuMSIgeD0iMTJweCIgeT0iMHB4IiB3aWR0aD0iMjRweCIgaGVpZ2h0PSI0cHgiIHZpZXdCb3g9IjAgMCA2IDMiIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDYgMyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+PHBvbHlnb24gcG9pbnRzPSI1Ljk5MiwwIDIuOTkyLDMgLTAuMDA4LDAgIi8+PC9zdmc+")
+    background: #000000
+        url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZlcnNpb249IjEuMSIgeD0iMTJweCIgeT0iMHB4IiB3aWR0aD0iMjRweCIgaGVpZ2h0PSI0cHgiIHZpZXdCb3g9IjAgMCA2IDMiIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDYgMyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+PHBvbHlnb24gcG9pbnRzPSI1Ljk5MiwwIDIuOTkyLDMgLTAuMDA4LDAgIiBmaWxsPSJ3aGl0ZSIvPjwvc3ZnPgo=")
         no-repeat 100% center;
 }
 #codelab-categories:focus {
+    border-radius: 100px;
     outline: 0;
 }
 footer {
-    background-color: #424242;
+    background-color: rgba(13, 13, 14, 1.0);
     font-size: 13px;
 }
 footer .footer-wrapper {
@@ -205,9 +226,9 @@ footer a {
     color: #9e9e9e;
 }
 footer .footerbar {
-    background-color: #616161;
+    background-color: rgba(13, 13, 14, 1.0);
     color: #fff;
-    font-size: 13px;
+    color: rgba(255, 255, 255, 0.9);
     padding: 10px 0;
 }
 footer .footerbar a {
@@ -216,17 +237,28 @@ footer .footerbar a {
 #shadow,
 #toolbar,
 #banner,
-#codelab-categories,
-google-codelab-index-cards .card,
-google-codelab-index-cards .card-footer .paper-button {
-    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2);
+google-codelab-index-cards .card {
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.14);
 }
-#rounded,
-#searchbar,
-#codelab-categories,
 google-codelab-index-cards .card,
-google-codelab-index-cards .card-footer .paper-button {
+google-codelab-index-cards .card-footer {
+    border-radius: 0px;
+}
+#rounded {
     border-radius: 4px;
+}
+google-codelab-index-cards .paper-button {
+    border: 1px solid #000000;
+    border-color: rgba(0, 0, 0, 0.9);
+    border-radius: 100px;
+    color: rgba(0, 0, 0, 0.9);
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 0.01em;
+    line-height: 24px;
+    padding: 6px 24px;
+    text-transform: none;
+    margin-left: auto;
 }
 google-codelab-index-cards {
     display: flex;
@@ -237,29 +269,29 @@ google-codelab-index-cards .card {
     position: relative;
     display: flex;
     flex-direction: column;
-    background-color: #fff;
-    border-bottom: 2px solid transparent;
+    background-color: #F4F5F6;
+    border-bottom: 4px solid transparent;
     margin: 0 10px 20px;
     width: 100%;
 }
 google-codelab-index-cards .card-duration {
     display: flex;
-    color: #aaa;
+    color: #888888;
     font-size: 11px;
     padding: 0 16px;
     justify-content: space-between;
 }
-google-codelab-index-cards .card .card-description{
+google-codelab-index-cards .card .card-description {
     padding: 16px 16px 0;
     flex: 1 0 auto;
-    color: #212121;
+    color: #888888;
 }
 google-codelab-index-cards .card .card-footer {
     display: flex;
     align-items: center;
     padding: 8px 16px;
 }
-google-codelab-index-cards .card-footer .paper-button {
+google-codelab-index-cards .card-footer {
     color: #fff;
     font-size: 14px;
     font-weight: 500;
@@ -267,8 +299,6 @@ google-codelab-index-cards .card-footer .paper-button {
     line-height: 24px;
     padding: 6px 24px;
     text-transform: none;
-    margin-left: auto;
-    background-color: #1a73e8;
 }
 @media only screen and (min-width: 625px) {
     google-codelab-index-cards .card {
@@ -288,6 +318,7 @@ google-codelab-index {
 main {
     flex: 1;
     padding: 0 0 20px;
+    border-radius: 40px;
 }
 @media only screen and (max-width: 625px) {
     #sort-by {

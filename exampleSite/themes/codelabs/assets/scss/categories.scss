@@ -1,6 +1,6 @@
 @mixin colorize-card($name, $color) {
   .#{$name}-bg {
-    background-color: $color !important;
+    background-color: rgba(255, 255, 255, 0.9) !important;
   }
 
   google-codelab-index-cards .card.#{$name}-bottom {
@@ -8,11 +8,11 @@
   }
 
   .#{$name}-icon {
-    background-image: url('/assets/icons/#{$name}.svg') !important;
-    background-size: 32px 32px;
-    width: 32px;
-    height: 32px;
-    margin-right: 10px;
+    background-image: url('assets/icons/#{$name}.svg') !important;
+    background-size: 28px 28px;
+    width: 28px;
+    height: 28px;
+    margin-right: 8px;
   }
 }
 

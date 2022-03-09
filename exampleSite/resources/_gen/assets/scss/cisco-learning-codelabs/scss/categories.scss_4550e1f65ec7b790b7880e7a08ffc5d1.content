@@ -1,64 +1,77 @@
 .gcp-bg {
-  background-color: #3884ff !important; }
+  background-color: rgba(255, 255, 255, 0.9) !important; }
 
 google-codelab-index-cards .card.gcp-bottom {
   border-bottom-color: #3884ff; }
 
 .gcp-icon {
-  background-image: url("/assets/icons/gcp.svg") !important;
-  background-size: 32px 32px;
-  width: 32px;
-  height: 32px;
-  margin-right: 10px; }
+  background-image: url("assets/icons/gcp.svg") !important;
+  background-size: 28px 28px;
+  width: 28px;
+  height: 28px;
+  margin-right: 8px; }
 
 .jupyter-bg {
-  background-color: #fc4903 !important; }
+  background-color: rgba(255, 255, 255, 0.9) !important; }
 
 google-codelab-index-cards .card.jupyter-bottom {
   border-bottom-color: #fc4903; }
 
 .jupyter-icon {
-  background-image: url("/assets/icons/jupyter.svg") !important;
-  background-size: 32px 32px;
-  width: 32px;
-  height: 32px;
-  margin-right: 10px; }
+  background-image: url("assets/icons/jupyter.svg") !important;
+  background-size: 28px 28px;
+  width: 28px;
+  height: 28px;
+  margin-right: 8px; }
 
 .mlops-bg {
-  background-color: #1A73E8 !important; }
+  background-color: rgba(255, 255, 255, 0.9) !important; }
 
 google-codelab-index-cards .card.mlops-bottom {
   border-bottom-color: #1A73E8; }
 
 .mlops-icon {
-  background-image: url("/assets/icons/mlops.svg") !important;
-  background-size: 32px 32px;
-  width: 32px;
-  height: 32px;
-  margin-right: 10px; }
+  background-image: url("assets/icons/mlops.svg") !important;
+  background-size: 28px 28px;
+  width: 28px;
+  height: 28px;
+  margin-right: 8px; }
 
 .mtest-bg {
-  background-color: #1A73E8 !important; }
+  background-color: rgba(255, 255, 255, 0.9) !important; }
 
 google-codelab-index-cards .card.mtest-bottom {
   border-bottom-color: #1A73E8; }
 
 .mtest-icon {
-  background-image: url("/assets/icons/mtest.svg") !important;
-  background-size: 32px 32px;
-  width: 32px;
-  height: 32px;
-  margin-right: 10px; }
+  background-image: url("assets/icons/mtest.svg") !important;
+  background-size: 28px 28px;
+  width: 28px;
+  height: 28px;
+  margin-right: 8px; }
+
+.server-bg {
+  background-color: rgba(255, 255, 255, 0.9) !important; }
+
+google-codelab-index-cards .card.server-bottom {
+  border-bottom-color: #000000; }
+
+.server-icon {
+  background-image: url("assets/icons/server.svg") !important;
+  background-size: 28px 28px;
+  width: 28px;
+  height: 28px;
+  margin-right: 8px; }
 
 .tfx-bg {
-  background-color: #f58442 !important; }
+  background-color: rgba(255, 255, 255, 0.9) !important; }
 
 google-codelab-index-cards .card.tfx-bottom {
   border-bottom-color: #f58442; }
 
 .tfx-icon {
-  background-image: url("/assets/icons/tfx.svg") !important;
-  background-size: 32px 32px;
-  width: 32px;
-  height: 32px;
-  margin-right: 10px; }
+  background-image: url("assets/icons/tfx.svg") !important;
+  background-size: 28px 28px;
+  width: 28px;
+  height: 28px;
+  margin-right: 8px; }

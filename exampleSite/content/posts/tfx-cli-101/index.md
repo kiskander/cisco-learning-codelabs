@@ -60,7 +60,7 @@ $ tree ./$PIPELINE_PATH
 ```
 
 ### 4. Examine each files and directories.
-![directory-structure](/assets/images/tfx-cli-101/directory-structure.png)
+![directory-structure](images/directory-structure.png)
 
 You can explore what's included in each file, but here is a short description.
 
@@ -233,7 +233,7 @@ $ tfx run create \
 
 After running `tfx run create` CLI, you will see the output like below. 
 
-![vertex pipelin run output](/assets/images/tfx-cli-101/vertex-pipeline-run.png)
+![vertex pipelin run output](images/vertex-pipeline-run.png)
 
 ### 5. View from GCP Console
 
@@ -241,10 +241,10 @@ If you visit [Vertex AI Pipeline](https://console.cloud.google.com/vertex-ai/pip
 
 Please note that the below figure is achieved by uncommenting all the `components.append(...)` statements in `pipeline/pipiline.py`.
 
-![vertex pipeline](/assets/images/tfx-cli-101/pipeline.png)
+![vertex pipeline](images/pipeline.png)
 
 At this point, you can click one of the nodes. Then detail information will show up in the right pane. It basically tells you the metadata of the node. You can find out what kind of input it took, and which output it produced. 
 
-![vertex node](/assets/images/tfx-cli-101/node-vertex-ai.png)
+![vertex node](images/node-vertex-ai.png)
 
 {{< /step >}}

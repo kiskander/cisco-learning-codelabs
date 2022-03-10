@@ -936,7 +936,7 @@
                 hc(mc(a)) +
                 '" id="arrow-back"><i class="material-icons">close</i></a><a href="#" id="menu"><i class="material-icons">menu</i></a></div><div id="codelab-time-container"></div><devsite-user></devsite-user></div><div id="steps"></div><div id="controls"><div id="fabs"><a href="#" id="previous-step" title="Previous step">Back</a><div class="spacer"></div><a href="#" id="next-step" title="Next step">Next</a><a href="' +
                 hc(mc(a)) +
-                '" id="done" hidden title="Codelab complete">Done</a></div></div></div><div tony="here" id="drawer">Drawer</div>'
+                '" id="done" hidden title="Codelab complete">Done</a></div></div></div><div id="drawer">Drawer</div>'
         );
     }
     function tc(a) {

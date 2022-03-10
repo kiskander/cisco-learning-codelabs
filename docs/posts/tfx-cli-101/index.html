@@ -64,7 +64,7 @@
 </span></span></code></pre></div><h3 id="3-print-whats-include-in-the-populated-project">3. Print what&rsquo;s include in the populated project.</h3>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ tree ./$PIPELINE_PATH
 </span></span></code></pre></div><h3 id="4-examine-each-files-and-directories">4. Examine each files and directories.</h3>
-<p><img src="/assets/images/tfx-cli-101/directory-structure.png" alt="directory-structure"></p>
+<p><img src="images/directory-structure.png" alt="directory-structure"></p>
 <p>You can explore what&rsquo;s included in each file, but here is a short description.</p>
 <h3 id="_runnerpy">*_runner.py</h3>
 <ul>
@@ -177,13 +177,13 @@
 </span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>      --project<span style="color:#f92672">=</span>$GCP_PROJECT_ID <span style="color:#ae81ff">\
 </span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>      --region<span style="color:#f92672">=</span>$GCP_PROJECT_REGION
 </span></span></code></pre></div><p>After running <code>tfx run create</code> CLI, you will see the output like below.</p>
-<p><img src="/assets/images/tfx-cli-101/vertex-pipeline-run.png" alt="vertex pipelin run output"></p>
+<p><img src="images/vertex-pipeline-run.png" alt="vertex pipelin run output"></p>
 <h3 id="5-view-from-gcp-console">5. View from GCP Console</h3>
 <p>If you visit <a href="https://console.cloud.google.com/vertex-ai/pipelines">Vertex AI Pipeline</a>, you will see the running pipelines are listed. Click the one that you have created, then you will see the graph like below. As the procedure goes by, each node will be filled with colors (green for runnning and success, red for failure).</p>
 <p>Please note that the below figure is achieved by uncommenting all the <code>components.append(...)</code> statements in <code>pipeline/pipiline.py</code>.</p>
-<p><img src="/assets/images/tfx-cli-101/pipeline.png" alt="vertex pipeline"></p>
+<p><img src="images/pipeline.png" alt="vertex pipeline"></p>
 <p>At this point, you can click one of the nodes. Then detail information will show up in the right pane. It basically tells you the metadata of the node. You can find out what kind of input it took, and which output it produced.</p>
-<p><img src="/assets/images/tfx-cli-101/node-vertex-ai.png" alt="vertex node"></p>
+<p><img src="images/node-vertex-ai.png" alt="vertex node"></p>
 
 </google-codelab-step>
 

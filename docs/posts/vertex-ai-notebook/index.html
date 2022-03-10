@@ -31,7 +31,6 @@
 
 <google-codelab-step label="Overview" duration="1:00">
 <p><a href="https://cloud.google.com/vertex-ai">Vertex AI platform</a> provides the fully managed version of <a href="https://jupyter.org/">JupyterLab</a>. JupyterLab has been the most popoular tool for data scientists and machine learning engineer. It comes with not only Jupyter Notebook but also Terminal, and so on.</p>
-<p><img src="https://jupyter.org/assets/labpreview.png" alt="jupyter lab"></p>
 <h2 id="what-youll-learn"><strong>What you&rsquo;ll learn</strong></h2>
 <ul>
 <li>How to setup IAM</li>
@@ -67,29 +66,29 @@
 </li>
 <li>
 <p>Enter <code>Service account details</code> as the first step. The second text bos will be autofiled.
-<img src="/assets/images/vertex-ai-notebook/service-account-1.png" alt="service account setup 1"></p>
+<img src="images/service-account-1.png" alt="service account setup 1"></p>
 </li>
 <li>
 <p>Add roles to the service account. It should have five different roles, <code>Vertex AI Custom Code Service Agent</code>, <code>Vertex AI Service Agent</code>, <code>Vertex AI User</code>, <code>Storage Object Admin</code>, and <code>Storage Object Creator</code>
-<img src="/assets/images/vertex-ai-notebook/service-account-2.png" alt="service account setup 2"></p>
+<img src="images/service-account-2.png" alt="service account setup 2"></p>
 </li>
 <li>
 <p>Click <code>DONE</code> button at the bottom.
-<img src="/assets/images/vertex-ai-notebook/service-account-3.png" alt="service account setup 3"></p>
+<img src="images/service-account-3.png" alt="service account setup 3"></p>
 </li>
 </ol>
 <h3 id="check-the-service-account"><strong>Check the service account</strong></h3>
 <ol>
 <li>Go to <a href="https://console.cloud.google.com/iam-admin/iam"><strong>IAM menu</strong></a> on the left pane</li>
 <li>You should be able to see your service account like below
-<img src="/assets/images/vertex-ai-notebook/service-account-4.png" alt="service account check"></li>
+<img src="images/service-account-4.png" alt="service account check"></li>
 </ol>
 
 </google-codelab-step>
 <google-codelab-step label="Enable Vertex AI API" duration="1:00">
 <p>In order to use APIs for Vertex AI, you have to enable it. After enabling the APIs, you will be able to access APIs for Vertex AI in other GCP services such as Vertex AI Notebook or Cloud Build.</p>
 <p>To do this, please visit <a href="https://console.developers.google.com/apis/api/aiplatform.googleapis.com/overview">Vertex AI API</a> and click <code>ENABLE</code> button. The UI looks something like below.</p>
-<p><img src="/assets/images/vertex-ai-notebook/vertex-ai-api.png" alt="vertex ai api"></p>
+<p><img src="images/vertex-ai-api.png" alt="vertex ai api"></p>
 
 </google-codelab-step>
 <google-codelab-step label="Create Vertex Notebook, Install dependencies" duration="5:00">
@@ -105,15 +104,15 @@
 <ol>
 <li>
 <p>Click the following sequence. <code>+ NEW INSTNACE</code>  ➡️  <code>TensorFlow Enterprise</code>  ➡️  <code>TensorFlow Enterprise 2.6 (with LTS)</code>  ➡️  <code>Without GPUs</code>
-<img src="/assets/images/vertex-ai-notebook/notebook.png" alt="notebook"></p>
+<img src="images/notebook.png" alt="notebook"></p>
 </li>
 <li>
 <p>The default setup page will show up. Click <code>CREATE</code> button if you think this setup is for you. In case you want to have a custom machine type, click <code>ADVANCED OPTIONS</code> and configure the machine type as you like in the new page like below.
-<img src="/assets/images/vertex-ai-notebook/notebook-creation.png" alt="notebook-creation-a"></p>
+<img src="images/notebook-creation.png" alt="notebook-creation-a"></p>
 </li>
 <li>
 <p>JupyterLab server creation will take few minutes. Once it is done, the <code>OPEN JUPYTERLAB</code> button will appear. Cleck that button, and it will bring you to a new page for JupyterLab.
-<img src="/assets/images/vertex-ai-notebook/notebook-open.png" alt="notebook-creation-b"></p>
+<img src="images/notebook-open.png" alt="notebook-creation-b"></p>
 </li>
 </ol>
 
@@ -122,11 +121,11 @@
 <ol>
 <li>
 <p>From the launching page, select <code>Python 3</code> under <code>Notebook</code> section. It will create an empty notebook for you.
-<img src="/assets/images/vertex-ai-notebook/notebook-selection.png" alt="notebook-selection"></p>
+<img src="images/notebook-selection.png" alt="notebook-selection"></p>
 </li>
 <li>
 <p>Check Python version and install TFX and KFP packages. The up-to-date versions of those packages are <code>1.2.0</code> and `1.6.1 as of writing this codelab.
-<img src="/assets/images/vertex-ai-notebook/notebook-package-install.png" alt="notebook-package-install"></p>
+<img src="images/notebook-package-install.png" alt="notebook-package-install"></p>
 <ul>
 <li><strong>TFX &gt; 1.0</strong> doesn&rsquo;t support <strong>Python 3.9</strong> at this time, so make sure the Python version is under <strong>3.9</strong>.</li>
 </ul>

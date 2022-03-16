@@ -9,8 +9,6 @@ authors: Jason Belk
 
 {{< step label="DevBox" duration="5:00" >}}
 
-## 1. Log into DevBox
-
 Reserve the [IOS XE on CSR Recommended Code](https://devnetsandbox.cisco.com/RM/Diagram/Index/05097c44-b162-4ea5-a1df-a449b4bd81c8) DevNet sandbox, which will give you a CSR1000v IOS-XE virtual network device and a Linux jump host to execute your code on.
 
 Log into the VPN and log into the DevBox.
@@ -26,9 +24,7 @@ It is highly recommended to use something like [VS Code Remote Development using
 
 {{< /step >}}
 
-{{< step label="Bash Aliases" duration="5:00" >}}
-
-## 2. Creating Your Device Inventory
+{{< step label="Creating Your Device Inventory" duration="5:00" >}}
 
 Ansible has two main files it needs to run:
 
@@ -58,9 +54,7 @@ This inventory file has one network device called `csr` with an IP address of 10
 
 {{< /step >}}
 
-{{< step label="Ansible Playbook" duration="10:00" >}}
-## 3. Building the Playbook
-Duration: 0:10:00
+{{< step label="Building the Playbook" duration="10:00" >}}
 
 Now create the playbook file `pb-conf-snmp.yaml` in the `ansible` directory (pb is short for playbook), and put the following contents in it:
 
@@ -96,9 +90,6 @@ The second task uses the `ios_command` module and has a list of one command to c
 {{< /step >}}
 
 {{< step label="Running the Playbook" duration="5:00" >}}
-
-## 4. Running the Playbook
-Duration: 0:05:00
 
 Before we run the playbook, because of the way the sandbox is set up, we need to ignore the SSH keys of the network device, or Ansible will throw an error. To do that issue the following command in the DevBox terminal:
 

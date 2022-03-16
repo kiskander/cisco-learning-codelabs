@@ -7,11 +7,9 @@ duration: 25:00
 authors: Jason Belk
 ---
 
+{{< step label="DevBox" duration="5:00" >}}
+
 ## 1. Log into DevBox
-
-{{< step label="DevBox" duration="2:00" >}}
-
-Duration: 0:05:00
 
 Reserve the [IOS XE on CSR Recommended Code](https://devnetsandbox.cisco.com/RM/Diagram/Index/05097c44-b162-4ea5-a1df-a449b4bd81c8) DevNet sandbox, which will give you a CSR1000v IOS-XE virtual network device and a Linux jump host to execute your code on.
 
@@ -31,8 +29,6 @@ It is highly recommended to use something like [VS Code Remote Development using
 {{< step label="Bash Aliases" duration="5:00" >}}
 
 ## 2. Creating Your Device Inventory
-
-Duration: 0:05:00
 
 Ansible has two main files it needs to run:
 

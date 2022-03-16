@@ -1,7 +1,7 @@
 ---
 title: Configuring IOS-XE with Ansible
 date: 2022-03-16
-categories: [automation]
+categories: [gcp]
 tags: [ansible][iosxe]
 duration: 25:00
 authors: Jason Belk

@@ -1,99 +1,147 @@
 ---
-title: Jason is 1337 H4x0r
-date: 2022-02-10
-categories: [mlops]
-tags: [sample]
-duration: 40:00
+title: Configuring IOS-XE with Ansible
+date: 2022-03-16
+categories: [automation]
+tags: [ansible][iosxe]
+duration: 25:00
 authors: Jason Belk
 ---
 
-# Brew Beer Fundamentals  
+## 1. Log into DevBox
 
-{{< step label="Milling" duration="5:00" >}}
+{{< step label="DevBox" duration="2:00" >}}
 
-Duration: 0:02:00
-
-![milling](images/step1.gif)
-
-Beginning In the brew house, different types of malt are crushed together to break up the grain kernels in order to extract fermentable sugars to produce a milled product called grist.
-
-```python
-import json 
-
-print("making beer is fun")
-
-```
-{{< /step >}}
-
-{{< step label="Mash Conversion" duration="5:00" >}}
-## Step 02: Mash Conversion
 Duration: 0:05:00
 
-![milling](images/step2.gif)
+Reserve the [IOS XE on CSR Recommended Code](https://devnetsandbox.cisco.com/RM/Diagram/Index/05097c44-b162-4ea5-a1df-a449b4bd81c8) DevNet sandbox, which will give you a CSR1000v IOS-XE virtual network device and a Linux jump host to execute your code on.
 
-`The grist is then transferred into a mash turn` 
-> where it is mixed with heated water in a process called mash conversion. The conversion process uses natural enzymes in the malt to break the malt’s starch down into sugars.
+Log into the VPN and log into the DevBox.
 
-{{< /step >}}
+```bash
+~$ ssh developer@10.10.20.20
+Warning: Permanently added '10.10.20.20' (ED25519) to the list of known hosts.
+Last login: Mon Mar 14 10:25:25 2022 from 192.168.254.11
+[developer@devbox ~]$
+```
 
-{{< step label="Lautering" duration="5:00" >}}
-## Step 03: Lautering
-Duration: 0:20:00
-
-![milling](images/step3.gif)
-
-The mash is then pumped into the lauter tun, where a sweet liquid (known as wort) is separated from the grain husks.
+It is highly recommended to use something like [VS Code Remote Development using SSH](https://code.visualstudio.com/docs/remote/ssh) to edit your text files on the jump host. Otherwise, you will have to use `vi` to edit files. 
 
 {{< /step >}}
 
-{{< step label="The boil" duration="5:00" >}}
+{{< step label="Bash Aliases" duration="5:00" >}}
 
-## Step 04: The boil
-Duration: 0:09:00
+## 2. Creating Your Device Inventory
 
-![milling](images/step4.gif)
+Duration: 0:05:00
 
-The wort is then collected in a vessel called a kettle, where it is brought to a controlled boil before the hops are added.
-{{< /step >}}
+Ansible has two main files it needs to run:
 
-{{< step label="Wort separation and cooling" duration="5:00" >}}
-## Step 05: Wort separation and cooling
-Duration: 0:09:00
+1. The Inventory
+2. The Playbook
 
-![milling](images/step5.gif)
+The inventory file lists the device names, IP addresses, device types, device groups and (for learning purposes) credentials.
 
-After boiling, the wort is transferred into a whirlpool for the wort separation stage. During this stage, any malt or hop particles are removed to leave a liquid that is ready to be cooled and fermented.
+For organizational purposes, we will create a directory to store everything we need in there. Create a directory and a file called `inventory` in it.
 
-### Let's ferment!
-{{< /step >}}
+```bash
+mkdir ansible
+touch ansible/inventory
+cd ansible
+```
 
-{{< step label="Fermentation" duration="5:00" >}}
+Put the following contents in the `inventory` file:
 
-## Step 06: Fermentation
-Duration: 0:11:00
 
-![milling](images/step6.gif)
+```ini
+csr1 ansible_host=10.10.20.48 ansible_network_os=ios ansible_user=developer ansible_ssh_pass=C1sco12345 ansible_connection=network_cli
+```
 
-To start the fermentation, yeast is added during the filling of the vessel. Yeast converts the sugary wort into beer by producing alcohol, a wide range of flavors, and carbon dioxide (used later in the process to give the beer its sparkle).
+Note that there are no spaces between the variable names like `ansible_host` and the variable values. Also, Ansible has built-in variable names, so the variable names have to be spelled correctly. 
 
-{{< /step >}}
-
-{{< step label="Maturation" duration="5:00" >}}
-
-## Step 07: Maturation
-Duration: 0:18:00
-
-![milling](images/step7.gif)
-
-After fermentation, the young “green” beer needs to be matured in order to allow both a full development of flavors and a smooth finish.
+This inventory file has one network device called `csr` with an IP address of 10.10.20.48, defined as an IOS device and all the devices Ansible col
 
 {{< /step >}}
 
-{{< step label="Filtration" duration="5:00" >}}
-## Step 08: Filtration, carbonation, and cellaring
-Duration: 0:22:00
+{{< step label="Ansible Playbook" duration="10:00" >}}
+## 3. Building the Playbook
+Duration: 0:10:00
 
-![milling](images/step8.gif)
+Now create the playbook file `pb-conf-snmp.yaml` in the `ansible` directory (pb is short for playbook), and put the following contents in it:
 
-After reaching its full potential, the beer is filtered, carbonated, and transferred to the bright beer tank, where it goes through a cellaring process that takes 3-4 weeks to complete. Once completed, the beer is ready to be packaged (and that’s a whole other fascinating process explained in the video).
+```yaml
+---
+  - name: PLAY 1 - DEPLOYING SNMP CONFIGURATIONS ON IOS
+    hosts: "csr1"
+    connection: network_cli
+    gather_facts: no
+    tasks:
+      - name: "TASK 1 in PLAY 1 - CONFIGURE SNMP LINES"
+        ios_config:
+          lines:
+            - snmp-server community code-demo RO
+            - snmp-server location RENO
+            - snmp-server contact JASON_BELK
+      - name: "TASK 2 in PLAY 1 - VERIFY SNMP LINES PRESENT"
+        ios_command:
+          commands:
+            - "show run | include snmp-server"
+```
+
+Ansible playbooks use the YAML data encoding format that is indentation based. The first level of indentation (name/hosts/connection/gather_facts/tasks) are the "play" level inputs, defining the connection type and devices that will be touched. Since Ansible is loading in the inventory file, it matches the device name `csr` to the inventory file and the device type from there as well. The spelling needs to match between the inventory and the playbook. 
+
+The next level of indentation are a list of "tasks" that are executed upon the hosts in sequential order. Each task has a name and a function it is executing using "modules" from the [Ansible list of modules](https://docs.ansible.com/ansible/2.9/modules/list_of_all_modules.html).
+
+In this case, our playbook is connecting to `csr` and executing two tasks. The first task uses the `ios_config` module to push a list of IOS SNMP config to the devices. If the config is already present, Ansible will not push it, as it checks the running config for us in the background.
+
+The second task uses the `ios_command` module and has a list of one command to check the running-configuration to see if it has the lines of configuration present.
+
+
+
+{{< /step >}}
+
+{{< step label="Running the Playbook" duration="5:00" >}}
+
+## 4. Running the Playbook
+Duration: 0:05:00
+
+Before we run the playbook, because of the way the sandbox is set up, we need to ignore the SSH keys of the network device, or Ansible will throw an error. To do that issue the following command in the DevBox terminal:
+
+```bash
+export ANSIBLE_HOST_KEY_CHECKING=False
+```
+
+Now to run the playbook, issue the following command:
+
+```bash
+ansible-playbook -i inventory pb-conf-snmp.yaml -v
+```
+
+The command `ansible-playbook` runs the playbook, loading in the inventory file with the `-i inventory` flag and giving the name of the playbook with `pb-conf-snmp.yaml`. The `-v` command is added to give an additional level of output, as by default Ansible will not display the `ios_command` show commands to the terminal output without it.
+
+Your output should look like this:
+
+```bash
+[developer@devbox ansible]$ ansible-playbook -i inventory pb-conf-snmp.yaml -v
+No config file found; using defaults
+/home/developer/ansible/inventory did not meet host_list requirements, check plugin documentation if this is unexpected
+/home/developer/ansible/inventory did not meet script requirements, check plugin documentation if this is unexpected
+
+PLAY [PLAY 1 - DEPLOYING SNMP CONFIGURATIONS ON IOS] ******************************************
+
+TASK [TASK 1 in PLAY 1 - CONFIGURE SNMP LINES] ************************************************
+changed: [csr1] => {"banners": {}, "changed": true, "commands": ["snmp-server community code-demo RO", "snmp-server location RENO"], "updates": ["snmp-server community code-demo RO", "snmp-server location RENO"]}
+
+TASK [TASK 2 in PLAY 1 - VERIFY SNMP LINES PRESENT] *******************************************
+ok: [csr1] => {"changed": false, "stdout": ["snmp-server community belk-demo RO\nsnmp-server community belk-demo1 RO\nsnmp-server community code-demo RO\nsnmp-server location RENO\nsnmp-server contact JASON_BELK"], "stdout_lines": [["snmp-server community belk-demo RO", "snmp-server community belk-demo1 RO", "snmp-server community code-demo RO", "snmp-server location RENO", "snmp-server contact JASON_BELK"]]}
+
+PLAY RECAP ************************************************************************************
+csr1                       : ok=2    changed=1    unreachable=0    failed=0
+
+[developer@devbox ansible]$
+```
+
+You can see from the second task output that the lines are now present. Ansible stored the "show" command output in the form of a Python list, so if the data needed to be parsed and evaluated, it could be. 
+
+Congrats! You used Ansible to configure an IOS-XE device!
+
 {{< /step >}}

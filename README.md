@@ -1,35 +1,54 @@
-[![CI](https://github.com/gde-codelabs/gde-codelabs.github.io/actions/workflows/ci.yml/badge.svg)](https://github.com/gde-codelabs/gde-codelabs.github.io/actions/workflows/ci.yml)
 
 # Guide
 
-## How to contribute as a writer
+## How to Contribute Content
 
 1. Install Hugo ([instructions](https://gohugo.io/getting-started/installing/))
-2. Run `git submodule update --init exampleSite/themes/codelabs/`
-3. Run `git submodule foreach git pull origin master`
-4. Write a post under `exampleSite/content/posts` directory
-    - You can follow the [format guide](https://github.com/googlecodelabs/tools). However, since this is not the actual Codelabs, you have to check locally if the features are supported
-4. Run `hugo server -D` in `exampleSite` for local test
-    - You don't have to kill and run this process whenever you add more contents. You can see the reflected changes if you refresh the browser
-5. Commit & Pull Request
+    - On MacOS use `brew install hugo`
+2. Run `./run_dev_server.sh` in root of the repository for local test
+    - You don't have to kill and run this process whenever you add more contents or make changes. You can see the reflected changes if you refresh the browser.
+3. Create a new Lab!
+4. Commit, push & pull request!
 
-#### In case of using GitHub Codespace
+## Creating a new Lab
 
-1. Skip the first step above since Hugo is preinstalled
-2. Run `hugo server -D --baseUrl=/ --appendPort=false` for local test instead
+### Using Template
 
-## How to format your post
+Use the helper script to create a new lab! Each post will be shown as a card on the front page when rendered.
 
-#### Front matter
+
+```shell
+./create_new_lab.sh
+Please provide the name of the lab to create.  Avoid special
+characters, symbols that would result in an invalid URL.
+
+Lab Name: Tony's Lab
+
+Creating lab: tonys-lab
+Content dir "cisco-learning-codelabs/site/content/posts/tonys-lab" created
+```
+
+### Manually
+
+Create a new content directory in the `site/posts/` directory.  Make sure to use ["slug"](https://pypi.org/project/python-slugify/) format for the contents directory name. Each post will be shown as a card on the front page when rendered.
+
+Content is written into the `index.md` file within the content's post directory.
+
+*Example:*
+`site/content/posts/tonys-lab/index.md`
+
+### Front Matter
+
+The `index.md` file for the content needs to have the following front matter defined before adding the content steps.
 
 ```
 ---
-title: TITLE
-date: YYYY-MM-DD
-categories: [MAIN_CATEGORY, SUB_CATEGORY]
+title: <LAB TITLE>
+date: <YYYY-MM-DD>
+categories: [<MAIN_CATEGORY>, <SUB_CATEGORY>]
 tags: [TAG1, TAG2, ...]
-duration: MM:SS
-authors: AUTHOR_NAME
+duration: <MM:SS>
+authors: <AUTHOR NAME>
 ---
 ```
 
@@ -38,40 +57,31 @@ The categories can have two values. The first is the main, and the second is the
 - mlops (Machine Learning Operations)
 - gcp (Google Cloud Platform)
 - tfx (TensorFlow Extended)
+- More coming!
 
-If you want to add more categories, please leave proporsal issues, then we can add them in the [theme repository](https://github.com/deep-diver/codelabs-hugo-theme).
-
-
-#### Contents
+### Steps
 
 Each step should be contained with `{{< step >}}` template string like below. You can give title for each step with the `label` attribute, and the estimated duration can be specified in `duration` attribute as well.
 
 ```
 {{< step label="Overview" duration="1:00" >}}
 
-WRITE YOUR OWN CONTENT
+<WRITE YOUR OWN CONTENT>
 
 {{< /step >}}
 ```
 
-In the `WRITE YOUR OWN CONTENT`, you can simply write anything in Markdown format. If you need to include images, you can put images in `exampleSite/content/assets/images` directory, and don't forget to refer those images with the `/` in the path (i.e. `![IMAGE](/assets/images/YOUR_CODELAB/IMAGE.png)`). You can check out the following source repositories of a few popular Codelabs for reference:
+Replace `<WRITE YOUR OWN CONTENT>` with your step text and images utilizing Markdown format. If you need to include images, you can put images in `site/content/posts/<lab name>/images` directory.  Create the `images` directory if it does not exist.
 
-* https://github.com/googlecodelabs/automl-vision-edge-in-mlkit
-* https://github.com/googlecodelabs/integrating-ml-apis
-* https://github.com/flutter/codelabs/tree/master/firebase-get-to-know-flutter
+*Example Markdown to include image:*
+`![IMAGE](images/IMAGE.png)` 
 
+To create additional steps just copy the above block below the previous step and edit as usual.
 
-#### Recommended first few steps
+### Considerations
 
-In order to make codelabs as appealing as possible, here are few recommendation: 
-
-- Codelabs are meant to be primarily about **_code_**. So it's recommended to not consider theory-focused 
-  posts for Codelabs. 
 - Make the **title** more noticible within **no more than 60 characters** long.
-- Always **add environmental setup** for readers to reproduce your experiments.
+- Always **add environmental setup** for readers to reproduce the lab.
 - Keep each steps as compact as possible:
   - Don't try to explain every underlying technologies.
   - Add links to other resources for keeping things compact and interesting to the readers.
-- Write multi part codelabs:
-  - If you need more detailed explanation on certain topics, simply write more codelabs and leave links. In this way, readers can consume the whole concept/tutorials bite by bite.
-  

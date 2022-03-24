@@ -1,6 +1,6 @@
 ---
 title: Beer Making 101
-date: 2022-02-10
+updated: 2022-02-10
 categories: [mlops]
 tags: [sample]
 duration: 40:00

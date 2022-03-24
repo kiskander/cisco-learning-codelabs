@@ -1,6 +1,6 @@
 ---
 title: This is a sample test
-date: 2021-09-03
+updated: 2021-09-03
 categories: [jupyter, gcp]
 tags: [VertexAI, Notebook]
 duration: 14:00

@@ -1,6 +1,6 @@
 ---
 title: Introduction to TFX CLI
-date: 2021-09-06
+updated: 2021-09-06
 categories: [tfx, gcp]
 tags: [VertexAI, ML Pipeline, TFX, MLOps]
 duration: 40:00

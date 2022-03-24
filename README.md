@@ -44,7 +44,7 @@ The `index.md` file for the content needs to have the following front matter def
 ```
 ---
 title: <LAB TITLE>
-date: <YYYY-MM-DD>
+updated: <YYYY-MM-DD>
 categories: [<MAIN_CATEGORY>, <SUB_CATEGORY>]
 tags: [TAG1, TAG2, ...]
 duration: <MM:SS>

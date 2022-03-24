@@ -1,6 +1,6 @@
 ---
 title: Learn how to install, configure and run the fantastic InspIRCd IRC server.
-date: 2018-02-02
+updated: 2018-02-02
 categories: [server]
 tags: [irc, InspIRCd, chat, server, guide, tutorial, hidden]
 duration: 42:00

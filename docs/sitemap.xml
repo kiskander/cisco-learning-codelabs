@@ -3,10 +3,10 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://kiskander.github.io/cisco-learning-codelabs/categories/</loc>
-    <lastmod>2022-03-22T12:28:59-04:00</lastmod>
+    <lastmod>2022-03-28T09:25:30-07:00</lastmod>
   </url><url>
     <loc>https://kiskander.github.io/cisco-learning-codelabs/</loc>
-    <lastmod>2022-03-22T12:28:59-04:00</lastmod>
+    <lastmod>2022-03-28T09:25:30-07:00</lastmod>
   </url><url>
     <loc>https://kiskander.github.io/cisco-learning-codelabs/posts/ansible-ios/</loc>
     <lastmod>2022-03-22T12:28:59-04:00</lastmod>
@@ -21,10 +21,10 @@
     <lastmod>2022-03-22T12:28:59-04:00</lastmod>
   </url><url>
     <loc>https://kiskander.github.io/cisco-learning-codelabs/posts/</loc>
-    <lastmod>2022-03-22T12:28:59-04:00</lastmod>
+    <lastmod>2022-03-28T09:25:30-07:00</lastmod>
   </url><url>
     <loc>https://kiskander.github.io/cisco-learning-codelabs/tags/</loc>
-    <lastmod>2022-03-22T12:28:59-04:00</lastmod>
+    <lastmod>2022-03-28T09:25:30-07:00</lastmod>
   </url><url>
     <loc>https://kiskander.github.io/cisco-learning-codelabs/tags/tfx/</loc>
     <lastmod>2022-03-22T12:28:59-04:00</lastmod>
@@ -35,67 +35,13 @@
     <loc>https://kiskander.github.io/cisco-learning-codelabs/tags/vertexai/</loc>
     <lastmod>2022-03-22T12:28:59-04:00</lastmod>
   </url><url>
-    <loc>https://kiskander.github.io/cisco-learning-codelabs/posts/beer-101/</loc>
-    <lastmod>2022-03-22T12:28:59-04:00</lastmod>
+    <loc>https://kiskander.github.io/cisco-learning-codelabs/tags/code/</loc>
+    <lastmod>2022-03-28T09:25:30-07:00</lastmod>
   </url><url>
-    <loc>https://kiskander.github.io/cisco-learning-codelabs/posts/belk-1/</loc>
-    <lastmod>2022-03-22T12:28:59-04:00</lastmod>
+    <loc>https://kiskander.github.io/cisco-learning-codelabs/categories/code/</loc>
+    <lastmod>2022-03-28T09:25:30-07:00</lastmod>
   </url><url>
-    <loc>https://kiskander.github.io/cisco-learning-codelabs/categories/mlops/</loc>
-    <lastmod>2022-03-22T12:28:59-04:00</lastmod>
-  </url><url>
-    <loc>https://kiskander.github.io/cisco-learning-codelabs/tags/sample/</loc>
-    <lastmod>2022-03-22T12:28:59-04:00</lastmod>
-  </url><url>
-    <loc>https://kiskander.github.io/cisco-learning-codelabs/posts/tfx-cli-101/</loc>
-    <lastmod>2022-03-22T12:28:59-04:00</lastmod>
-  </url><url>
-    <loc>https://kiskander.github.io/cisco-learning-codelabs/posts/sample-4/</loc>
-    <lastmod>2022-03-22T12:28:59-04:00</lastmod>
-  </url><url>
-    <loc>https://kiskander.github.io/cisco-learning-codelabs/categories/jupyter/</loc>
-    <lastmod>2022-03-22T12:28:59-04:00</lastmod>
-  </url><url>
-    <loc>https://kiskander.github.io/cisco-learning-codelabs/posts/vertex-ai-notebook/</loc>
-    <lastmod>2022-03-22T12:28:59-04:00</lastmod>
-  </url><url>
-    <loc>https://kiskander.github.io/cisco-learning-codelabs/tags/notebook/</loc>
-    <lastmod>2022-03-22T12:28:59-04:00</lastmod>
-  </url><url>
-    <loc>https://kiskander.github.io/cisco-learning-codelabs/posts/sample-3/</loc>
-    <lastmod>2022-03-22T12:28:59-04:00</lastmod>
-  </url><url>
-    <loc>https://kiskander.github.io/cisco-learning-codelabs/posts/sample/</loc>
-    <lastmod>2022-03-22T12:28:59-04:00</lastmod>
-  </url><url>
-    <loc>https://kiskander.github.io/cisco-learning-codelabs/posts/sample-2/</loc>
-    <lastmod>2022-03-22T12:28:59-04:00</lastmod>
-  </url><url>
-    <loc>https://kiskander.github.io/cisco-learning-codelabs/tags/chat/</loc>
-    <lastmod>2022-03-22T12:28:59-04:00</lastmod>
-  </url><url>
-    <loc>https://kiskander.github.io/cisco-learning-codelabs/tags/guide/</loc>
-    <lastmod>2022-03-22T12:28:59-04:00</lastmod>
-  </url><url>
-    <loc>https://kiskander.github.io/cisco-learning-codelabs/tags/hidden/</loc>
-    <lastmod>2022-03-22T12:28:59-04:00</lastmod>
-  </url><url>
-    <loc>https://kiskander.github.io/cisco-learning-codelabs/tags/inspircd/</loc>
-    <lastmod>2022-03-22T12:28:59-04:00</lastmod>
-  </url><url>
-    <loc>https://kiskander.github.io/cisco-learning-codelabs/tags/irc/</loc>
-    <lastmod>2022-03-22T12:28:59-04:00</lastmod>
-  </url><url>
-    <loc>https://kiskander.github.io/cisco-learning-codelabs/posts/build-irc-server/</loc>
-    <lastmod>2022-03-22T12:28:59-04:00</lastmod>
-  </url><url>
-    <loc>https://kiskander.github.io/cisco-learning-codelabs/tags/server/</loc>
-    <lastmod>2022-03-22T12:28:59-04:00</lastmod>
-  </url><url>
-    <loc>https://kiskander.github.io/cisco-learning-codelabs/categories/server/</loc>
-    <lastmod>2022-03-22T12:28:59-04:00</lastmod>
-  </url><url>
-    <loc>https://kiskander.github.io/cisco-learning-codelabs/tags/tutorial/</loc>
-    <lastmod>2022-03-22T12:28:59-04:00</lastmod>
+    <loc>https://kiskander.github.io/cisco-learning-codelabs/posts/write-a-codelab/</loc>
+    <lastmod>2022-03-28T09:25:30-07:00</lastmod>
   </url>
 </urlset>

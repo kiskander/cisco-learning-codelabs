@@ -1,0 +1,110 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
+  <title>How to Write a Codelab</title>
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Source+Code+Pro:400|Roboto:400,300,400italic,500,700|Roboto+Mono">
+  <link rel="stylesheet" href="//fonts.googleapis.com/icon?family=Material+Icons">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://kiskander.github.io/cisco-learning-codelabs/google_codelab_step_scss_bin.css">
+  <link rel="stylesheet" href="https://kiskander.github.io/cisco-learning-codelabs/google_codelab_survey_scss_bin.css">
+  <link rel="stylesheet" href="https://kiskander.github.io/cisco-learning-codelabs/google_codelab_scss_bin.css">
+  <link rel="stylesheet" href="https://kiskander.github.io/cisco-learning-codelabs/google_codelab_step_overide.css">
+  <style>
+    body {
+      transition: opacity ease-in 0.2s;
+    }
+
+    body[unresolved] {
+      opacity: 0;
+      display: block;
+      overflow: hidden;
+      position: relative;
+    }
+  </style>
+</head>
+
+<body unresolved>
+  <google-codelab title="How to Write a Codelab" id="how-to-write-a-codelab" authors="Kareem Iskander" environment="web" feedback-link="mailto:donotreply@cisco.com" home-url="https://kiskander.github.io/cisco-learning-codelabs/">
+
+<!-- raw HTML omitted -->
+<google-codelab-step label="Overview" duration="1:00">
+<h3 id="what-youll-learn">What you’ll Learn</h3>
+<ul>
+<li>How to create steps</li>
+<li>How to include code snippets</li>
+<li>How to include links and images</li>
+<li>Call to Action</li>
+</ul>
+<h3 id="what-youll-need">What you&rsquo;ll need</h3>
+<ul>
+<li>Any required application or library</li>
+<li>Access to a Sandbox</li>
+</ul>
+
+</google-codelab-step>
+<google-codelab-step label="How to create steps" duration="1:00">
+<ul>
+<li>Each step should be contained with <code>{ {&lt; step &gt;}}</code> template string like below.</li>
+<li>You can give title for each step with the <code>label</code> attribute, and the estimated duration can be specified in <code>duration</code> attribute as well.</li>
+</ul>
+<!-- raw HTML omitted -->
+<pre tabindex="0"><code>{ {&lt;step label=&#34;Overview&#34; duration=&#34;1:00&#34; &gt;}}
+
+WRITE YOUR OWN CONTENT
+
+{ {&lt;step&gt;}}
+</code></pre>
+</google-codelab-step>
+<google-codelab-step label="How to include code snippets" duration="3:00">
+<p>To include code snippets you can do a few things.</p>
+<ul>
+<li>Inline highlighting can be done using the tiny tick mark on your keyboard: &ldquo;`&rdquo;</li>
+<li>Embedded code</li>
+</ul>
+<h3 id="python">Python</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> requests
+</span></span></code></pre></div><h3 id="javascript">JavaScript</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span>{ 
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">key1</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;string&#34;</span>, 
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">key2</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">integer</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">key3</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;string&#34;</span>
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h3 id="java">Java</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#66d9ef">for</span> <span style="color:#f92672">(</span>statement 1<span style="color:#f92672">;</span> statement 2<span style="color:#f92672">;</span> statement 3<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">// code block to be executed
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#f92672">}</span>
+</span></span></code></pre></div>
+</google-codelab-step>
+<google-codelab-step label="Hyperlinking and Embedded Images" duration="1:00">
+<h2 id="hyperlinking">Hyperlinking</h2>
+<p><a href="https://www.youtube.com/playlist?list=PL2k86RlAekM-Qdu_In2-8B1YT6c66MnY0">Snack Minute</a></p>
+<h2 id="images">Images</h2>
+<p><img src="./images/sm.png" alt="alt-text-here"></p>
+
+</google-codelab-step>
+<!-- raw HTML omitted -->
+<google-codelab-step label="Congratulations" duration="1:00">
+<h2 id="learn-more">Learn More</h2>
+<ul>
+<li>Link to Learning Content in new LXP</li>
+<li>Link to other walkthroughs</li>
+<li>Link to Marketing offer page</li>
+</ul>
+
+</google-codelab-step>
+
+
+  </google-codelab>
+  <script src="https://kiskander.github.io/cisco-learning-codelabs/native-shim.js"></script>
+  <script src="https://kiskander.github.io/cisco-learning-codelabs/custom-elements.min.js"></script>
+  <script src="https://kiskander.github.io/cisco-learning-codelabs/prettify.js"></script>
+  <script src="https://kiskander.github.io/cisco-learning-codelabs/google_codelab_step_bin.js"></script>
+  <script src="https://kiskander.github.io/cisco-learning-codelabs/google_codelab_survey_bin.js"></script>
+  <script src="https://kiskander.github.io/cisco-learning-codelabs/google_codelab_bin.js"></script>
+  <script src="https://kiskander.github.io/cisco-learning-codelabs/google_codelab_step_overide.js"></script>
+</body>
+
+</html>

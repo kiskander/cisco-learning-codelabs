@@ -1,0 +1,24 @@
+{
+  "title": "Cisco Learning and Certifications",
+  "languageCode": "en-us",
+  "publishDir": "../docs",
+  "theme": "codelabs",
+  "baseURL": "https://kiskander.github.io/cisco-learning-codelabs/",
+  "relativeURLs": true,
+  "googleAnalytics": "",
+  "enableGitInfo": true,
+  "params": {
+    "homeTitle": "Welcome to Learning Bites",
+    "homeDescription": "Launch your free learning resources with a curated list of content and watch your skills skyrocket to the moon!",
+    "feedbackLink": "mailto:donotreply@cisco.com",
+    "footer": "<a href=\"https://cisco.com\" target=\"_new\">©2022 Cisco Systems, Inc.</a>",
+    "categoryColors": {
+      "gcp": "#3884ff",
+      "jupyter": "#fc4903",
+      "mlops": "#1A73E8",
+      "mtest": "#1A73E8",
+      "server": "#000000",
+      "tfx": "#f58442"
+    }
+  }
+}

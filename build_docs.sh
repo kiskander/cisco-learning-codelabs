@@ -1,2 +1,2 @@
-#!/bin/bash
-hugo -s exampleSite -D -d ../docs -b https://kiskander.github.io/cisco-learning-codelabs/
+#!/usr/bin/env bash
+hugo -s site -d ../docs -b https://kiskander.github.io/cisco-learning-codelabs/

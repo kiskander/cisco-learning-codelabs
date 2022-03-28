@@ -1,77 +1,79 @@
-[![CI](https://github.com/gde-codelabs/gde-codelabs.github.io/actions/workflows/ci.yml/badge.svg)](https://github.com/gde-codelabs/gde-codelabs.github.io/actions/workflows/ci.yml)
 
 # Guide
 
-## How to contribute as a writer
+## How to Contribute Content
 
 1. Install Hugo ([instructions](https://gohugo.io/getting-started/installing/))
-2. Run `git submodule update --init exampleSite/themes/codelabs/`
-3. Run `git submodule foreach git pull origin master`
-4. Write a post under `exampleSite/content/posts` directory
-    - You can follow the [format guide](https://github.com/googlecodelabs/tools). However, since this is not the actual Codelabs, you have to check locally if the features are supported
-4. Run `hugo server -D` in `exampleSite` for local test
-    - You don't have to kill and run this process whenever you add more contents. You can see the reflected changes if you refresh the browser
+4. Write a post under `site/content/posts/<your directory>` directory in markdown.
+    - Markdown Cheatsheet can be found [here](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
+4. Run `hugo server -D` in `site` for local testing
+    - You don't have to kill and run this process whenever you add or update content. Hugo local server auto-refreshes
 5. Commit & Pull Request
 
-#### In case of using GitHub Codespace
+### Create your initial codelabs
 
-1. Skip the first step above since Hugo is preinstalled
-2. Run `hugo server -D --baseUrl=/ --appendPort=false` for local test instead
+- Create a new markdown file `file.md` in your newly created directory `site/content/posts/<your directory>`
+- Use this [Codelabs Template](/sample/markdown-template/codelab.md) to create your first Codelab
 
-## How to format your post
-
-#### Front matter
-
+#### Fill-in the header metadata
+Copy and paste the headers below into your markdown file and change the values appropriately.
+Guidelines are available below the sample headers.
 ```
 ---
-title: TITLE
-date: YYYY-MM-DD
-categories: [MAIN_CATEGORY, SUB_CATEGORY]
+title: <LAB TITLE>
+date: <YYYY-MM-DD>
+categories: [<MAIN_CATEGORY>, <SUB_CATEGORY>]
 tags: [TAG1, TAG2, ...]
-duration: MM:SS
-authors: AUTHOR_NAME
+duration: <MM:SS>
+authors: <AUTHOR NAME>
 ---
 ```
+Metadata consists of key-value pairs of the form "key: value". Keys cannot
+contain colons, and separate metadata fields must be separated by blank lines.
+At present, values must all be on one line. All metadata must come before the
+title. Any arbitrary keys and values may be used; however, only the following
+will be understood by the renderer:
 
-The categories can have two values. The first is the main, and the second is the sub, and they will appear at the bottom of the card in the front page. Only the main category is used to filter by categories and colorize the bottom color of the card. Here is the list of currently supported categories:
+* Categories: A comma-separated list of the topics the codelab covers. The categories can have two values. The first is the main, and the second is the sub, and they will appear at the bottom of the card in the front page. Only the main category is used to filter by categories and colorize the bottom color of the card.
+Here is the list of currently supported categories:
 
-- mlops (Machine Learning Operations)
-- gcp (Google Cloud Platform)
-- tfx (TensorFlow Extended)
+  - mlops (Machine Learning Operations)
+  - gcp (Google Cloud Platform)
+  - tfx (TensorFlow Extended)
+  - More coming!
 
-If you want to add more categories, please leave proporsal issues, then we can add them in the [theme repository](https://github.com/deep-diver/codelabs-hugo-theme).
+* Tags: A comma-separated list of tags describing your codelab. This field helps with searching
+* Duration: The time it takes to complete the entire codelab. Typically the sum of all steps
 
 
-#### Contents
+### Steps
 
-Each step should be contained with `{{< step >}}` template string like below. You can give title for each step with the `label` attribute, and the estimated duration can be specified in `duration` attribute as well.
+- Each step should be contained with `{{< step >}}` template string like below. You can give title for each step with the `label` attribute, and the estimated duration can be specified in `duration` attribute as well.
 
 ```
 {{< step label="Overview" duration="1:00" >}}
 
-WRITE YOUR OWN CONTENT
+<WRITE YOUR OWN CONTENT>
 
 {{< /step >}}
 ```
 
-In the `WRITE YOUR OWN CONTENT`, you can simply write anything in Markdown format. If you need to include images, you can put images in `exampleSite/content/assets/images` directory, and don't forget to refer those images with the `/` in the path (i.e. `![IMAGE](/assets/images/YOUR_CODELAB/IMAGE.png)`). You can check out the following source repositories of a few popular Codelabs for reference:
+Replace `<WRITE YOUR OWN CONTENT>` with your step text and images utilizing Markdown format. If you need to include images, you can put images in `site/content/posts/<lab name>/images` directory.  Create the `images` directory if it does not exist.
 
-* https://github.com/googlecodelabs/automl-vision-edge-in-mlkit
-* https://github.com/googlecodelabs/integrating-ml-apis
-* https://github.com/flutter/codelabs/tree/master/firebase-get-to-know-flutter
+*Example Markdown to include image:*
+`![IMAGE](images/IMAGE.png)` 
 
+- To create additional steps just copy the above block below the previous step and edit as usual.
 
-#### Recommended first few steps
+### Resources 
+- [Codelabs Template](/sample/markdown-template/codelab.md)
+- [Markdown format Cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
 
-In order to make codelabs as appealing as possible, here are few recommendation: 
+### Considerations
 
-- Codelabs are meant to be primarily about **_code_**. So it's recommended to not consider theory-focused 
-  posts for Codelabs. 
-- Make the **title** more noticible within **no more than 60 characters** long.
-- Always **add environmental setup** for readers to reproduce your experiments.
+- Make the **title** more noticeable within **no more than 60 characters** long.
+- `Overview` and `Call to Action` steps are mandatory and must be at the beginning and end of your guide (see [template](/sample/markdown-template/codelab.md))
+- Always **add environmental setup** for readers to reproduce the Codelab.
 - Keep each steps as compact as possible:
   - Don't try to explain every underlying technologies.
   - Add links to other resources for keeping things compact and interesting to the readers.
-- Write multi part codelabs:
-  - If you need more detailed explanation on certain topics, simply write more codelabs and leave links. In this way, readers can consume the whole concept/tutorials bite by bite.
-  

@@ -6,15 +6,16 @@
     <description>Recent content in ML Pipeline on Cisco Learning and Certifications</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 06 Sep 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://kiskander.github.io/cisco-learning-codelabs/tags/ml-pipeline/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 16 Mar 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://kiskander.github.io/cisco-learning-codelabs/tags/ml-pipeline/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Introduction to TFX CLI</title>
-      <link>https://kiskander.github.io/cisco-learning-codelabs/posts/tfx-cli-101/</link>
-      <pubDate>Mon, 06 Sep 2021 00:00:00 +0000</pubDate>
+      <title>Configuring IOS-XE with Ansible</title>
+      <link>https://kiskander.github.io/cisco-learning-codelabs/posts/ansible-ios/</link>
+      <pubDate>Wed, 16 Mar 2022 00:00:00 +0000</pubDate>
       
-      <guid>https://kiskander.github.io/cisco-learning-codelabs/posts/tfx-cli-101/</guid>
-      <description>TensorFlow Extended(TFX) gives you the power of building a end to end machine learning pipeline. However it is somewhat difficult to grasp the ideas coupled with the actual codebase, and it is non trivial to write an entire machinie learning project from scratch.
-The main advantage of using TFX CLI is that you can get a fully working end to end example out of the box. Also, many customizable points are already included such as how to leverage BigQuery, Vertex AI Training/Serving, Dataflow GCP infrastructure.</description>
+      <guid>https://kiskander.github.io/cisco-learning-codelabs/posts/ansible-ios/</guid>
+      <description>Reserve the IOS XE on CSR Recommended Code DevNet sandbox, which will give you a CSR1000v IOS-XE virtual network device and a Linux jump host to execute your code on.
+Log into the VPN and log into the DevBox.
+~$ ssh developer@10.10.20.20 Warning: Permanently added &amp;#39;10.10.20.20&amp;#39; (ED25519) to the list of known hosts. Last login: Mon Mar 14 10:25:25 2022 from 192.168.254.11 [developer@devbox ~]$ It is highly recommended to use something like VS Code Remote Development using SSH to edit your text files on the jump host.</description>
     </item>
     
   </channel>

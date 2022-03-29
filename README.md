@@ -21,7 +21,7 @@ Guidelines are available below the sample headers.
 ```
 ---
 title: <LAB TITLE>
-date: <YYYY-MM-DD>
+updated: <YYYY-MM-DD>
 categories: [<MAIN_CATEGORY>, <SUB_CATEGORY>]
 tags: [TAG1, TAG2, ...]
 duration: <MM:SS>

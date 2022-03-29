@@ -1,6 +1,6 @@
 ---
 title: Configuring IOS-XE with Ansible
-date: 2022-03-16
+updated: 2022-03-16
 categories: [tfx, gcp]
 tags: [VertexAI, ML Pipeline, TFX, MLOps]
 duration: 25:00

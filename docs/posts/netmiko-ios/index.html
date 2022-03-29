@@ -1,0 +1,187 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
+  <title>Configuring Cisco IOS with Netmiko</title>
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Source+Code+Pro:400|Roboto:400,300,400italic,500,700|Roboto+Mono">
+  <link rel="stylesheet" href="//fonts.googleapis.com/icon?family=Material+Icons">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://kiskander.github.io/cisco-learning-codelabs/google_codelab_step_scss_bin.css">
+  <link rel="stylesheet" href="https://kiskander.github.io/cisco-learning-codelabs/google_codelab_survey_scss_bin.css">
+  <link rel="stylesheet" href="https://kiskander.github.io/cisco-learning-codelabs/google_codelab_scss_bin.css">
+  <link rel="stylesheet" href="https://kiskander.github.io/cisco-learning-codelabs/google_codelab_step_overide.css">
+  <style>
+    body {
+      transition: opacity ease-in 0.2s;
+    }
+
+    body[unresolved] {
+      opacity: 0;
+      display: block;
+      overflow: hidden;
+      position: relative;
+    }
+  </style>
+</head>
+
+<body unresolved>
+  <google-codelab title="Configuring Cisco IOS with Netmiko" id="configuring-cisco-ios-with-netmiko" authors="Jason Belk" updated="" environment="web" feedback-link="mailto:donotreply@cisco.com" home-url="https://kiskander.github.io/cisco-learning-codelabs/">
+
+<google-codelab-step label="Overview" duration="1:00">
+<p><a href="https://github.com/ktbyers/netmiko/tree/master">Netmiko</a> is a very popular open-source Python library written by a network engineer for network engineers to &ldquo;simplify CLI connections to network devices.&rdquo;</p>
+<p>It supports a variety of <a href="https://github.com/ktbyers/netmiko/blob/master/PLATFORMS.md">platforms</a> and is a great tool for network engineers to learn how Python can be used to interact with their infrastructure.</p>
+<h3 id="what-youll-learn">What you’ll Learn</h3>
+<ul>
+<li>How to connect to an IOS-XE device with Netmiko</li>
+<li>How to send show commands to the IOS-XE Device</li>
+<li>How to send configuration commands to the IOS-XE Device</li>
+<li>Call to Action</li>
+</ul>
+<h3 id="what-youll-need">What you&rsquo;ll need</h3>
+<ul>
+<li>Access to a <a href="https://devnetsandbox.cisco.com/RM/Diagram/Index/43964e62-a13c-4929-bde7-a2f68ad6b27c?diagramType=Topology">Sandbox with Netmiko installed and an IOS-XE Device</a></li>
+<li>Text editor (such as VS Code) to remotely edit files on the jump host or your local Netmiko installation.</li>
+<li>A basic understanding of Python</li>
+</ul>
+
+</google-codelab-step>
+<google-codelab-step label="Connecting to a Device with Netmiko" duration="4:00">
+<p>In order to connect to the device, Netmiko needs to know some basic data about the device we are connecting to (so it can use the right device drivers behind the scenes), such as:</p>
+<ul>
+<li>IP Address: <code>10.10.20.175</code></li>
+<li>Username: <code>cisco</code></li>
+<li>Password: <code>cisco</code></li>
+<li>[Platform]((<a href="https://github.com/ktbyers/netmiko/blob/master/netmiko/ssh_dispatcher.py#L121">https://github.com/ktbyers/netmiko/blob/master/netmiko/ssh_dispatcher.py#L121</a>): <code>cisco_ios_telnet</code> (spelled this way so Netmiko recognizes it, we are using telnet in the sandbox, if we had SSH going to the device instead it would simply be <code>cisco_ios</code>)</li>
+</ul>
+<p>Netmiko uses Python objects and classes to abstract the complexity of the code. All we need to do is create an object using the <code>ConnectHandler</code> class, with the right required inputs, and it will create a Python device object for us. We can then use that device object with the associated object methods to execute our desired tasks, such as connecting to the device or sending commands.</p>
+<h3 id="creating-the-code">Creating the Code</h3>
+<p>Create a Python file called <code>learn_netmiko.py</code> and put the following lines in it. Feel free to execute it at the end of each step, adding the code to the file as you go. At the top of the file you will need the following import statement to load in the netmiko connection code <code>from netmiko import ConnectHandler</code>.</p>
+<p>First, we define a few variables to plug into the inputs for when the device object is created. Then we create and name the device object.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">from</span> netmiko <span style="color:#f92672">import</span> ConnectHandler
+</span></span><span style="display:flex;"><span>host <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;10.10.20.175&#39;</span>
+</span></span><span style="display:flex;"><span>username <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;cisco&#39;</span>
+</span></span><span style="display:flex;"><span>password <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;cisco&#39;</span>
+</span></span><span style="display:flex;"><span>platform <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;cisco_ios_telnet&#39;</span>
+</span></span><span style="display:flex;"><span>device_object <span style="color:#f92672">=</span> ConnectHandler(device_type<span style="color:#f92672">=</span>platform, ip<span style="color:#f92672">=</span>host, username<span style="color:#f92672">=</span>username, password<span style="color:#f92672">=</span>password)
+</span></span></code></pre></div><p>Next, we use one of the methods from the <code>device_object</code> to test our connection to the device, making sure our credentials and IP address are correct.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>print(device_object<span style="color:#f92672">.</span>is_alive())
+</span></span></code></pre></div><h3 id="output">Output</h3>
+<p>Your output should look like this:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#f92672">(</span>py3venv<span style="color:#f92672">)</span> <span style="color:#f92672">[</span>developer@devbox ~<span style="color:#f92672">]</span>$ python learn_netmiko.py
+</span></span><span style="display:flex;"><span>True
+</span></span><span style="display:flex;"><span><span style="color:#f92672">(</span>py3venv<span style="color:#f92672">)</span> <span style="color:#f92672">[</span>developer@devbox ~<span style="color:#f92672">]</span>$
+</span></span></code></pre></div><p>The output is saying that the device is alive because it was able to successfully connect to it.</p>
+
+</google-codelab-step>
+<google-codelab-step label="How to Send Show Commands" duration="5:00">
+<h3 id="show-version">Show Version</h3>
+<p>Now that we have a device object, we can start sending show commands to it and work with the output. Netmiko uses the <code>send_command</code> method to send commands, and behind the scenes already has a <code>term len 0</code> so the output is all in one text string. It will return the output in a string, that we can capture with a <code>sh_ver_output</code> variable, and then print to view.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>sh_ver_output <span style="color:#f92672">=</span> device_object<span style="color:#f92672">.</span>send_command(<span style="color:#e6db74">&#39;show version&#39;</span>)
+</span></span><span style="display:flex;"><span>print(sh_ver_output)
+</span></span></code></pre></div><p>Your output (truncated for space) should look like this:</p>
+<pre tabindex="0"><code>(py3venv) [developer@devbox ~]$ python learn_netmiko.py
+True
+Cisco IOS XE Software, Version 17.03.02
+Cisco IOS Software [Amsterdam], Virtual XE Software (X86_64_LINUX_IOSD-UNIVERSALK9-M), Version 17.3.2, RELEASE SOFTWARE (fc3)
+....
+(py3venv) [developer@devbox ~]$
+</code></pre><p>Now that we have the output, we can do a simple check to see what version is present, as we know what format the output will be, by adding the following lines (and removing the <code>print(sh_ver_output)</code> statement so we don&rsquo;t have the full version output every time we test the script):</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">if</span> <span style="color:#e6db74">&#34;Version 17.03.02&#34;</span> <span style="color:#f92672">in</span> sh_ver_output:
+</span></span><span style="display:flex;"><span>    print(<span style="color:#e6db74">&#34;Device is compliant&#34;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">else</span>:
+</span></span><span style="display:flex;"><span>    print(<span style="color:#e6db74">&#34;Device is not compliant&#34;</span>)
+</span></span></code></pre></div><h3 id="summary">Summary</h3>
+<p>Your script should look like this now:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">from</span> netmiko <span style="color:#f92672">import</span> ConnectHandler
+</span></span><span style="display:flex;"><span>host <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;10.10.20.175&#39;</span>
+</span></span><span style="display:flex;"><span>username <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;cisco&#39;</span>
+</span></span><span style="display:flex;"><span>password <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;cisco&#39;</span>
+</span></span><span style="display:flex;"><span>platform <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;cisco_ios_telnet&#39;</span>
+</span></span><span style="display:flex;"><span>device_object <span style="color:#f92672">=</span> ConnectHandler(device_type<span style="color:#f92672">=</span>platform, ip<span style="color:#f92672">=</span>host, username<span style="color:#f92672">=</span>username, password<span style="color:#f92672">=</span>password)
+</span></span><span style="display:flex;"><span>print(device_object<span style="color:#f92672">.</span>is_alive())
+</span></span><span style="display:flex;"><span>sh_ver_output <span style="color:#f92672">=</span> device_object<span style="color:#f92672">.</span>send_command(<span style="color:#e6db74">&#39;show version&#39;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># print(sh_ver_output)</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">if</span> <span style="color:#e6db74">&#34;Version 17.03.02&#34;</span> <span style="color:#f92672">in</span> sh_ver_output:
+</span></span><span style="display:flex;"><span>    print(<span style="color:#e6db74">&#34;Device is compliant&#34;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">else</span>:
+</span></span><span style="display:flex;"><span>    print(<span style="color:#e6db74">&#34;Device is not compliant&#34;</span>)
+</span></span></code></pre></div><p>Your output should look like this:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#f92672">(</span>py3venv<span style="color:#f92672">)</span> <span style="color:#f92672">[</span>developer@devbox ~<span style="color:#f92672">]</span>$ python learn_netmiko.py
+</span></span><span style="display:flex;"><span>True
+</span></span><span style="display:flex;"><span>Device is compliant
+</span></span><span style="display:flex;"><span><span style="color:#f92672">(</span>py3venv<span style="color:#f92672">)</span> <span style="color:#f92672">[</span>developer@devbox ~<span style="color:#f92672">]</span>$
+</span></span></code></pre></div>
+</google-codelab-step>
+<google-codelab-step label="How to Send Configuration Commands" duration="5:00">
+<p>Netmiko allows you to send configuration commands both from Python string variables (as we used for &ldquo;show version&rdquo;), and with a file input. This can be very useful because you may already have a cut sheet ready, and a script to send the commands to a list of devices. Even though you can use the <code>send_command</code> to send configuration commands, it is a bit easier to just put the commands in file for this simple demo.</p>
+<p>To add a new loopback, add the following commands to a file in the same directory as your script, calling the file <code>loopback_commands.txt</code>:</p>
+<pre tabindex="0"><code>interface Loopback1337
+ description Added by Netmiko
+ ip address 172.16.254.128 255.255.255.252
+</code></pre><p>We use the <code>config_file</code> parameter in the <code>send_config_from_file</code> method on the same <code>device_object</code> to tell Netmiko which commands to send to the device:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>device_object<span style="color:#f92672">.</span>send_config_from_file(config_file<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;/home/developer/loopback_commands.txt&#39;</span>)
+</span></span></code></pre></div><p>In order to verify the commands are present, we can add a verification show command:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>sh_int_output <span style="color:#f92672">=</span> device_object<span style="color:#f92672">.</span>send_command(<span style="color:#e6db74">&#39;show run | section interface&#39;</span>)
+</span></span><span style="display:flex;"><span>print(sh_int_output)
+</span></span></code></pre></div><h3 id="summary">Summary</h3>
+<p>Your code should look like this now:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">from</span> netmiko <span style="color:#f92672">import</span> ConnectHandler
+</span></span><span style="display:flex;"><span>host <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;10.10.20.175&#39;</span>
+</span></span><span style="display:flex;"><span>username <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;cisco&#39;</span>
+</span></span><span style="display:flex;"><span>password <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;cisco&#39;</span>
+</span></span><span style="display:flex;"><span>platform <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;cisco_ios_telnet&#39;</span>
+</span></span><span style="display:flex;"><span>device_object <span style="color:#f92672">=</span> ConnectHandler(device_type<span style="color:#f92672">=</span>platform, ip<span style="color:#f92672">=</span>host, username<span style="color:#f92672">=</span>username, password<span style="color:#f92672">=</span>password)
+</span></span><span style="display:flex;"><span>print(device_object<span style="color:#f92672">.</span>is_alive())
+</span></span><span style="display:flex;"><span>sh_ver_output <span style="color:#f92672">=</span> device_object<span style="color:#f92672">.</span>send_command(<span style="color:#e6db74">&#39;show version&#39;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># print(sh_ver_output)</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">if</span> <span style="color:#e6db74">&#34;Version 17.03.02&#34;</span> <span style="color:#f92672">in</span> sh_ver_output:
+</span></span><span style="display:flex;"><span>    print(<span style="color:#e6db74">&#34;Device is compliant&#34;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">else</span>:
+</span></span><span style="display:flex;"><span>    print(<span style="color:#e6db74">&#34;Device is not compliant&#34;</span>)
+</span></span><span style="display:flex;"><span>device_object<span style="color:#f92672">.</span>send_config_from_file(config_file<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;/home/developer/loopback_commands.txt&#39;</span>)
+</span></span><span style="display:flex;"><span>sh_int_output <span style="color:#f92672">=</span> device_object<span style="color:#f92672">.</span>send_command(<span style="color:#e6db74">&#39;show run | section interface&#39;</span>)
+</span></span><span style="display:flex;"><span>print(sh_int_output)
+</span></span></code></pre></div><p>Your output should look like this, with the new Loopback present (output truncated for relevance):</p>
+<pre tabindex="0"><code>(py3venv) [developer@devbox ~]$ python learn_netmiko.py
+True
+Device is compliant
+interface Loopback0
+ description to
+ no ip address
+ shutdown
+interface Loopback1337
+ description Added by Netmiko
+ no ip address
+interface GigabitEthernet1
+ description to port6.sandbox-backend
+ vrf forwarding Mgmt-intf
+ ip address 10.10.20.175 255.255.255.0
+...
+(py3venv) [developer@devbox ~]$
+</code></pre>
+</google-codelab-step>
+<google-codelab-step label="Congratulations" duration="1:00">
+<p>Congrats! Netmiko is a powerful library with a lot of relevance to network engineers. Check out some of these other resources to learn more about automation and networking.</p>
+<h2 id="learn-more">Learn More</h2>
+<ul>
+<li><a href="https://learningnetwork.cisco.com/s/topic/0TO3i0000008jY5GAI/devnet-certifications-community">Cisco Learning Network DevNet Certification Community</a></li>
+<li><a href="https://learningnetwork.cisco.com/s/devnet-training-videos">DevNet Certification Training Videos</a></li>
+<li><a href="https://developer.cisco.com/automation-bootcamp/">Train Your Team with Automation Bootcamps</a></li>
+</ul>
+
+</google-codelab-step>
+
+
+  </google-codelab>
+  <script src="https://kiskander.github.io/cisco-learning-codelabs/native-shim.js"></script>
+  <script src="https://kiskander.github.io/cisco-learning-codelabs/custom-elements.min.js"></script>
+  <script src="https://kiskander.github.io/cisco-learning-codelabs/prettify.js"></script>
+  <script src="https://kiskander.github.io/cisco-learning-codelabs/google_codelab_step_bin.js"></script>
+  <script src="https://kiskander.github.io/cisco-learning-codelabs/google_codelab_survey_bin.js"></script>
+  <script src="https://kiskander.github.io/cisco-learning-codelabs/google_codelab_bin.js"></script>
+  <script src="https://kiskander.github.io/cisco-learning-codelabs/google_codelab_step_overide.js"></script>
+</body>
+
+</html>

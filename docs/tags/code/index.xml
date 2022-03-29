@@ -5,7 +5,19 @@
     <link>https://kiskander.github.io/cisco-learning-codelabs/tags/code/</link>
     <description>Recent content in code on Cisco Learning and Certifications</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language><atom:link href="https://kiskander.github.io/cisco-learning-codelabs/tags/code/index.xml" rel="self" type="application/rss+xml" />
+    <language>en-us</language>
+    <lastBuildDate>Tue, 29 Mar 2022 13:44:24 -0700</lastBuildDate><atom:link href="https://kiskander.github.io/cisco-learning-codelabs/tags/code/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Configuring Cisco IOS with Netmiko</title>
+      <link>https://kiskander.github.io/cisco-learning-codelabs/posts/netmiko-ios/</link>
+      <pubDate>Tue, 29 Mar 2022 13:44:24 -0700</pubDate>
+      
+      <guid>https://kiskander.github.io/cisco-learning-codelabs/posts/netmiko-ios/</guid>
+      <description>Netmiko is a very popular open-source Python library written by a network engineer for network engineers to &amp;ldquo;simplify CLI connections to network devices.&amp;rdquo;
+It supports a variety of platforms and is a great tool for network engineers to learn how Python can be used to interact with their infrastructure.
+What you’ll Learn  How to connect to an IOS-XE device with Netmiko How to send show commands to the IOS-XE Device How to send configuration commands to the IOS-XE Device Call to Action  What you&amp;rsquo;ll need  Access to a Sandbox with Netmiko installed and an IOS-XE Device Text editor (such as VS Code) to remotely edit files on the jump host or your local Netmiko installation.</description>
+    </item>
+    
     <item>
       <title>How to Write a Codelab</title>
       <link>https://kiskander.github.io/cisco-learning-codelabs/posts/write-a-codelab/</link>

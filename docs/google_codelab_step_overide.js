@@ -1,8 +1,11 @@
 var topElement = document.getElementsByTagName("google-codelab")[0];
 var title = topElement.getAttribute("codelab-title");
 var authors = topElement.getAttribute("authors");
+var updated = topElement.getAttribute("updated");
+(updated = new Date(updated)), (updated = "Jan Feb Mar Apr May Jun Jul Aug Sep Oct Nov Dec".split(" ")[updated.getMonth()] + " " + updated.getUTCDate() + ", " + updated.getFullYear());
 console.log(title);
 console.log(authors);
+console.log(updated);
 
 var steps = document.getElementsByTagName("google-codelab-step");
 
@@ -22,13 +25,20 @@ innerNewTitleInstruction.append(innerTitle);
 var innerNewAboutInstruction = document.createElement("div");
 innerNewAboutInstruction.className = "instructions about-card";
 
+var innerAbout = document.createElement("div");
+innerAbout.className = "inner about-this-codelab";
+innerAbout.innerHTML = `About`;
+innerNewAboutInstruction.append(innerAbout);
+
 var innerAuthor = document.createElement("div");
-innerAuthor.className = "inner inner-author";
-innerAuthor.innerHTML = `
-        <div class="about-this-codelab">About this codelab</div>
-        <i class="material-icons" style="font-size:25px;">account_circle</i> Written by ${authors}
-        `;
+innerAuthor.className = "inner-author";
+innerAuthor.innerHTML = `<i class="material-icons" style="font-size:25px;">account_circle</i> Written by ${authors}`;
 innerNewAboutInstruction.append(innerAuthor);
+
+var innerUpdated = document.createElement("div");
+innerUpdated.className = "inner-update";
+innerUpdated.innerHTML = `Updated ${updated}`;
+innerNewAboutInstruction.append(innerUpdated);
 
 steps[0].insertBefore(innerNewTitleInstruction, innerBeforeIntruction);
 steps[0].insertBefore(innerNewAboutInstruction, innerBeforeIntruction);

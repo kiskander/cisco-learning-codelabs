@@ -1,10 +1,9 @@
-name: github pages
+name: Deploy GitHub Pages
 
 on:
   push:
     branches:
       - main  # Set a branch to deploy
-  pull_request:
 
 jobs:
   deploy:
@@ -21,22 +20,22 @@ jobs:
           hugo-version: 'latest'
           extended: true
 
-      - name: Build hugo
+      - name: Build Hugo
         run: |
           echo "Running Hugo build"
           ./build_docs.sh
 
-      - name: Git init
+      - name: Git Setup
         run: |
           echo steps.filter.outputs.docs
           git config --global user.name '${{github.actor}}'
           git config --global user.email '${{github.actor}}@users.noreply.github.com'
 
-      - name: Git add
+      - name: Git Add
         run: git add --force .
 
-      - name: Git commit
-        run: git commit -m "published new content"
+      - name: Git Commit
+        run: git commit -m "Published New Content"
 
-      - name: Push to main
+      - name: Git Push to main Branch
         run: git push

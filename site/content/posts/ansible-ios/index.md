@@ -1,6 +1,7 @@
 ---
 title: Configuring IOS-XE with Ansible
 updated: 2022-03-16
+description: Learn the basics of using Ansible to configure Cisco IOS-XE
 categories: [tfx, gcp]
 tags: [VertexAI, ML Pipeline, TFX, MLOps]
 duration: 25:00

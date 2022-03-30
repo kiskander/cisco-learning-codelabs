@@ -1482,7 +1482,7 @@
             configurable: !0,
             enumerable: !0,
             get: function () {
-                return "title codelab-title environment category feedback-link selected last-updated no-toolbar no-arrows".split(" ");
+                return "title codelab-title environment category feedback-link selected description last-updated no-toolbar no-arrows".split(" ");
             },
         },
     });

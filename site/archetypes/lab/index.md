@@ -1,6 +1,7 @@
 ---
 title: "{{ replace .Name "-" " " | title }}"
 updated: {{ .Date }}
+description: "{{ replace .Name "-" " " | title }}"
 categories: []
 tags: []
 duration: 20:00

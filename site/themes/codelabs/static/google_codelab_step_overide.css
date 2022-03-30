@@ -18,14 +18,20 @@ google-codelab-step h2.step-title {
 .about-this-codelab {
     font-size: 25px;
     font-weight: bold;
-    margin-bottom: 10px;
 }
 
 .inner-author {
     text-align: left;
-    font-size: 15px; 
+    font-size: 15px;
     font-weight: bold;
     padding: 0px 24px 0px 24px !important;
+}
+
+.inner-description {
+    text-align: left;
+    font-size: 18px;
+    font-weight: normal;
+    padding: 0px 24px 24px 24px !important;
 }
 
 .inner-update {

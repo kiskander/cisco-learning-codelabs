@@ -2,10 +2,14 @@ var topElement = document.getElementsByTagName("google-codelab")[0];
 var title = topElement.getAttribute("codelab-title");
 var authors = topElement.getAttribute("authors");
 var updated = topElement.getAttribute("updated");
+var description = topElement.getAttribute("description");
 (updated = new Date(updated)), (updated = "Jan Feb Mar Apr May Jun Jul Aug Sep Oct Nov Dec".split(" ")[updated.getMonth()] + " " + updated.getUTCDate() + ", " + updated.getFullYear());
+
+/* Browser Console */
 console.log(title);
 console.log(authors);
 console.log(updated);
+console.log(description);
 
 var steps = document.getElementsByTagName("google-codelab-step");
 
@@ -29,6 +33,11 @@ var innerAbout = document.createElement("div");
 innerAbout.className = "inner about-this-codelab";
 innerAbout.innerHTML = `About`;
 innerNewAboutInstruction.append(innerAbout);
+
+var innerDesc = document.createElement("div");
+innerDesc.className = "inner-description";
+innerDesc.innerHTML = description;
+innerNewAboutInstruction.append(innerDesc);
 
 var innerAuthor = document.createElement("div");
 innerAuthor.className = "inner-author";

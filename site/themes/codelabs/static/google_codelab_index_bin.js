@@ -567,15 +567,15 @@
          return "zSoyz";
      }
      var xb = {}; /*
- 
+
   Copyright 2018 Google Inc.
- 
+
   Licensed under the Apache License, Version 2.0 (the "License");
   you may not use this file except in compliance with the License.
   You may obtain a copy of the License at
- 
+
        http://www.apache.org/licenses/LICENSE-2.0
- 
+
   Unless required by applicable law or agreed to in writing, software
   distributed under the License is distributed on an "AS IS" BASIS,
   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
@@ -697,10 +697,11 @@
          var sub_category = categories.length > 1 ? categories[1] : '';
 
          var c = a.getAttribute("title") || "",
+             description = a.getAttribute("description") || "",
              d = parseInt(a.getAttribute("duration"), 10) || 0,
              e;
          (e = a.getAttribute("updated")) ? ((e = new Date(e)), (e = "Jan Feb Mar Apr May Jun Jul Aug Sep Oct Nov Dec".split(" ")[e.getMonth()] + " " + e.getUTCDate() + ", " + e.getFullYear())) : (e = "");
-         c = { M: b, title: c, duration: d, T: e || "", S: a.getAttribute("tags") || "", K: a.getAttribute("authors") || "", href: a.href };
+         c = { M: b, title: c, description: description, duration: d, T: e || "", S: a.getAttribute("tags") || "", K: a.getAttribute("authors") || "", href: a.href };
          b = w || (w = new vb());
          c = c || xb;
          d = c.title;
@@ -716,7 +717,7 @@
          } else {
           author = '</div><div class="card-author"> by ' + String(author);
          }
-         console.log(S);             
+         console.log(S);
          c = K;
          d =
              '<div class="card ' +
@@ -725,7 +726,7 @@
              L(d) +
              '" category="' +
              L(e) +
-             '" subcategory="' + 
+             '" subcategory="' +
              sub_category +
              '" tags="' +
              L(m) +
@@ -733,9 +734,11 @@
              L(f) +
              '" updated="' +
              L(g) +
-             '"><div class="card-description">' +
-             J(d) + 
-             author + 
+             '"><div class="card-title">' +
+             J(d) +
+             '</div><div class="card-description">' +
+             J(description) +
+             author +
              '</div><div class="card-duration"><span>' +
              (f ? J(f) + " min" : "") +
              "</span><span>" +

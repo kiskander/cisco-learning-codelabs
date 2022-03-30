@@ -1,6 +1,8 @@
 ---
-Title: How to Write a Codelab
+title: How to Write a Codelab
 id: how-to-write-a-codelab
+description: Learn how to create content and some of the available features!
+updated: 2002-03-28
 categories: [code]
 tags: [code]
 status: Published

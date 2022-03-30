@@ -70,6 +70,9 @@
               tags="{{ delimit .Params.tags "," }}"
               {{ if .Params.authors -}}
               authors="{{ .Params.authors }}"
+              {{ end -}}
+              {{ if .Params.description -}}
+              description="{{ .Params.description }}"
               {{ end -}}>
             </a>
           </li>

@@ -1,6 +1,6 @@
 ---
-
 title: "Configuring Cisco IOS with Netmiko"
+description: "Learn how to use the Python Netmiko library to configure Cisco IOS"
 date: 2022-03-29T13:44:24-07:00
 categories: [code]
 tags: [code]

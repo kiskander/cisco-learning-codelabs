@@ -66,7 +66,7 @@ Replace `<WRITE YOUR OWN CONTENT>` with your step text and images utilizing Mark
 - To create additional steps just copy the above block below the previous step and edit as usual.
 
 ### Resources 
-- [Codelabs Template](/sample/markdown-template/codelab.md)
+- [Codelabs Template](https://raw.githubusercontent.com/kiskander/cisco-learning-codelabs/main/sample/markdown-template/codelab.md)
 - [Markdown format Cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
 
 ### Considerations
